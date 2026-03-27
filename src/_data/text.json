@@ -1,0 +1,18 @@
+{
+    "header":{
+        "title": "Dual Input"
+     },
+     "tagline": {
+            "tag1": "Two users. One system.",
+            "tag2": "Write from anywhere.",
+            "tag3": "On different screens.",
+            "tag4": "At the same time.",
+            "tag5": "No interference.",
+            "tag6": "Just flow"
+        },
+        
+     "link": {
+         "href": "/dual-input/",
+         "text": "Go to Dual Input"
+    }
+}

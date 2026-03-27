@@ -3,7 +3,153 @@ layout: layouts/base.njk
 title: Dual Input
 permalink: /dual-input/
 ---
+<div class ="grid">
+    <div class="box-left-top">
+         <div class="dual-stage">
+            <div class="text-line top-line">
+                <span class="letter">D</span>
+                <span class="letter">u</span>
+                <span class="letter">a</span>
+                <span class="letter">l</span>
+                <span class="letter space">&nbsp;</span>
+                <span class="letter">I</span>
+                <span class="letter">n</span>
+                <span class="letter">p</span>
+                <span class="letter">u</span>
+                <span class="letter">t</span>
+            </div>
 
-<h1>Dual Input</h1>
-<p>This is my landing page</p>
-<a href="/dual-input/">Go to Dual Input</a>
+            <div class="text-line mirroredy bottom-line">
+                <span class="letter">D</span>
+                <span class="letter">u</span>
+                <span class="letter">a</span>
+                <span class="letter">l</span>
+                <span class="letter space">&nbsp;</span>
+                <span class="letter">I</span>
+                <span class="letter">n</span>
+                <span class="letter">p</span>
+                <span class="letter">u</span>
+                <span class="letter">t</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-left-bottom">
+
+        <p class="tagline">
+            {{text.tagline.tag1}}
+        </p>
+
+         <p class="tagline">
+            <span class="typing-line">
+                {{ text.tagline.tag2 }}
+            </span><br>
+
+            <span class="mirrored">
+                <span class="typing-line">
+                    {{ text.tagline.tag2 }}
+                </span> 
+            </span>
+        </p>
+
+        <p class="tagline">
+            {{text.tagline.tag3}}<br>
+            {{text.tagline.tag4}}<br>
+            {{text.tagline.tag5}}<br>
+            {{text.tagline.tag6}}
+        </p>
+    </div>
+     <div class="box-right-top">
+     </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => { /* för annars hade inte .typing line funnits än*/
+    const lines = document.querySelectorAll(".typing-line"); /*hämtar alla element med klassen .typing-line och sparar dem i variabeln lines*/
+    const trigger = document.querySelector(".tagline"); /*hämtar elementet med klassen .tagline och sparar det i variabeln trigger*/
+    const letters = document.querySelectorAll(".letter");
+
+    
+    let started = false;
+    let inView = false;
+
+    lines.forEach(line => {
+        line.dataset.text = line.textContent;
+        line.textContent = ""; /* gör så att texten i elementet blir tom, så att den kan skrivas ut en bokstav i taget senare */
+    });
+
+    function typeLine(el, speed = 40) {
+        return new Promise(resolve => {
+            let i = 0;
+            const text = el.dataset.text;
+
+            function type() {
+                if (i < text.length) {
+                    el.textContent += text[i];
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    resolve();
+                }
+            }
+
+            type();
+        });
+    }
+
+    function startTyping() {
+        if (started) return;
+        started = true;
+
+        Promise.all([
+            typeLine(lines[0], 40),
+            typeLine(lines[1], 40)
+        ]);
+    }
+
+    const tagline = document.querySelector(".tagline");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            inView = entry.isIntersecting;
+        });
+    }, { threshold: 0.5 });
+
+    if (trigger){
+        observer.observe(trigger);
+    }
+    window.addEventListener("scroll", () => {
+        if (inView && !started){
+            startTyping();
+        }
+    });
+
+    const topLetters = document.querySelectorAll(".top-line .letter");
+    const bottomLetters = document.querySelectorAll(".bottom-line .letter");
+
+    letters.forEach((letter, index) => {
+        letter.addEventListener("mouseenter", () => {
+            topLetters[index].classList.add("active");
+            bottomLetters[index].classList.add("active");
+        });
+
+        letter.addEventListener("mouseleave", () => {
+            topLetters[index].classList.remove("active");
+            bottomLetters[index].classList.remove("active");
+        });
+    });
+
+    bottomLetters.forEach((letter, index) => {
+        letter.addEventListener("mouseenter", () => {
+            topLetters[index].classList.add("active");
+            bottomLetters[index].classList.add("active");
+        });
+
+        letter.addEventListener("mouseleave", () => {
+            topLetters[index].classList.remove("active");
+            bottomLetters[index].classList.remove("active");
+        });
+    });
+});
+ 
+</script>
