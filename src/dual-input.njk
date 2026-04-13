@@ -3,153 +3,312 @@ layout: layouts/base.njk
 title: Dual Input
 permalink: /dual-input/
 ---
-<div class ="grid">
-    <div class="box-left-top">
-         <div class="dual-stage">
-            <div class="text-line top-line">
-                <span class="letter">D</span>
-                <span class="letter">u</span>
-                <span class="letter">a</span>
-                <span class="letter">l</span>
-                <span class="letter space">&nbsp;</span>
-                <span class="letter">I</span>
-                <span class="letter">n</span>
-                <span class="letter">p</span>
-                <span class="letter">u</span>
-                <span class="letter">t</span>
-            </div>
+<div id="top"></div>
+<div class ="topbar">
+    <div class="topbarleft">
+        <a href="#top" class="topbarbutton topbartext">
+            {{ text.topbar.left | default("DUAL INPUT") }}
+        </a>
+    </div>
 
-            <div class="text-line mirroredy bottom-line">
-                <span class="letter">D</span>
-                <span class="letter">u</span>
-                <span class="letter">a</span>
-                <span class="letter">l</span>
-                <span class="letter space">&nbsp;</span>
-                <span class="letter">I</span>
-                <span class="letter">n</span>
-                <span class="letter">p</span>
-                <span class="letter">u</span>
-                <span class="letter">t</span>
+    <div class="topbarcenter">
+    </div> 
+
+    <div class="topbarright" id="topbarRight">
+     <a href="https://id24.com/" class="topbarbutton topbartext company-link" data-cursor-label="Go to company website">
+            {{ text.topbar.right | default("ID24 Technology") }}
+     </a>
+    </div>
+</div>
+
+<header class="tagline"> 
+    <p class="header"> {{ text.tagline.tag }} </p>
+</header>
+
+
+<main>
+<div class="screen-animation"> 
+    <div class="dual-screens">
+        <div class="left-screen">
+            <div class="input-screen"> 
+                <div class="screen-text" id="sharedOutputLeft"> </div>
             </div>
+            <div class="keys">
+                    <button class="screen-button" data-key="D">D</button>
+                    <button class="screen-button" data-key="U">U</button>
+                    <button class="screen-button" data-key="A">A</button>
+                    <button class="screen-button" data-key="L">L</button>
+
+                    <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
+
+                    <button class="screen-button" data-key="I">I</button>
+                    <button class="screen-button" data-key="N">N</button>
+                    <button class="screen-button" data-key="P">P</button>
+                    <button class="screen-button" data-key="U">U</button>
+                    <button class="screen-button" data-key="T">T</button>
+
+                    <button class ="screen-button key-blancspace" data-key=" "> </button>
+
+            </div>
+        </div>
+
+        <div class="right-screen">
+            <div class="input-screen"> 
+                <div class="screen-text" id="sharedOutputRight"> </div>
+            </div>
+            <div class="keys"> 
+                <button class="screen-button" data-key="D">D</button>
+                <button class="screen-button" data-key="U">U</button>
+                <button class="screen-button" data-key="A">A</button>
+                <button class="screen-button" data-key="L">L</button>
+                    
+                <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
+
+                <button class="screen-button" data-key="I">I</button>
+                <button class="screen-button" data-key="N">N</button>
+                <button class="screen-button" data-key="P">P</button>
+                <button class="screen-button" data-key="U">U</button>
+                <button class="screen-button" data-key="T">T</button>
+
+                <button class ="screen-button key-blancspace" data-key=" "> </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!---
+<div class ="tagline-first">
+    <p class="tagline">
+        <span class="typing-line">
+            {{ text.tagline.tag }}
+        </span><br>
+
+        <span class="mirrored">
+            <span class="typing-line">
+                {{ text.tagline.tag }}
+             </span> 
+        </span>
+    </p>
+</div>
+-->
+
+<div class ="info-grid">
+    <div class ="info-box-1">
+        <p class="info-text-header typing-line"> {{ text["info-1"].title }} </p>
+        <p class="info-text"> {{ text["info-1"].paragraph1 }} </p>
+        <p class="info-text"> {{ text["info-1"].paragraph2 }} </p>
+        <p class="info-text"> {{ text["info-1"].paragraph3 }} </p>
+    </div>
+
+    <div class ="info-animation-1">
+        <div class ="animation-built1used2">
+            <div class="built1used2-laptop"></div>
+            <div class="built1used2-screen"></div>
+            <div class="built1used2-cursor1"></div>
+            <div class="built1used2-cursor2"></div>
         </div>
     </div>
 
-    <div class="box-left-bottom">
-
-        <p class="tagline">
-            {{text.tagline.tag1}}
-        </p>
-
-         <p class="tagline">
-            <span class="typing-line">
-                {{ text.tagline.tag2 }}
-            </span><br>
-
-            <span class="mirrored">
-                <span class="typing-line">
-                    {{ text.tagline.tag2 }}
-                </span> 
-            </span>
-        </p>
-
-        <p class="tagline">
-            {{text.tagline.tag3}}<br>
-            {{text.tagline.tag4}}<br>
-            {{text.tagline.tag5}}<br>
-            {{text.tagline.tag6}}
-        </p>
+    <div class ="info-box-2">
+        <p class="info-text-header"> {{ text["info-2"].title }} </p>
+        <p class="info-text"> {{ text["info-2"].paragraph1 }} </p>
+        <p class="info-text"> {{ text["info-2"].paragraph2 }} </p>
+        <p class="info-text"> {{ text["info-2"].paragraph3 }} </p>
     </div>
-     <div class="box-right-top">
-     </div>
+
+    <div class = "info-animation-2">
+        <div class ="animation-ownSession">
+            <div class="ownSession-laptop"></div>
+            <div class="ownSession-screen"></div>
+            <div class="ownSession-cursor1"></div>
+            <div class="ownSession-cursor2"></div>
+        </div> 
+    </div>
+
+    <div class ="info-box-3">
+        <p class="info-text-header">{{ text["info-3"].title }}</p>
+        <p class="info-text"> {{ text["info-3"].paragraph1 }} </p>
+        <p class="info-text"> {{ text["info-3"].paragraph2 }} </p>
+        <p class="info-text"> {{ text["info-3"].paragraph3 }} </p>
+    </div>
+
+    <div class = "info-animation-3">
+        <div class ="animation-company">
+            <a href="https://id24.com/" class="screen-button-link" aria-label="Go to ID24 website">
+                {{ text.companylink | default("ID24") }}
+            </a>
+            <p class="company-link-label">Click to visit ID24 website</p>
+        </div> 
+    </div>
+
 </div>
+</main>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => { /* för annars hade inte .typing line funnits än*/
-    const lines = document.querySelectorAll(".typing-line"); /*hämtar alla element med klassen .typing-line och sparar dem i variabeln lines*/
-    const trigger = document.querySelector(".tagline"); /*hämtar elementet med klassen .tagline och sparar det i variabeln trigger*/
-    const letters = document.querySelectorAll(".letter");
+<!--
+<div class = "animation-section">
+    <div class="dual-stage">
+        <div class="key-input-screen"></div>
+        <div class="text-line mirrored-axis top-line">
+        <div class="frame k1">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">D</p>
+        </div>
 
-    
-    let started = false;
-    let inView = false;
+        <div class="frame k2">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">U</p>
+        </div>
 
-    lines.forEach(line => {
-        line.dataset.text = line.textContent;
-        line.textContent = ""; /* gör så att texten i elementet blir tom, så att den kan skrivas ut en bokstav i taget senare */
-    });
+        <div class="frame k3">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">A</p>
+        </div>
+        
+        <div class="frame k4">
+            <img class="base" src="/img/key-base.svg" alt="">
+                <div class="recolor-overlay"></div>
+                <img class="button" src="/img/key-button.svg" alt="">
+                <div class="cover"></div>
+                <p class="text">L</p>
+        </div>
 
-    function typeLine(el, speed = 40) {
-        return new Promise(resolve => {
-            let i = 0;
-            const text = el.dataset.text;
+        <div class="frame k5">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">I</p>
+        </div>
 
-            function type() {
-                if (i < text.length) {
-                    el.textContent += text[i];
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    resolve();
-                }
-            }
+        <div class="frame k6">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">N</p>
+        </div>
+        
+        <div class="frame k7">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">P</p>
+        </div>
 
-            type();
-        });
-    }
+        <div class="frame k8">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">U</p>
+        </div>
 
-    function startTyping() {
-        if (started) return;
-        started = true;
+        <div class="frame k9">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">T</p>
+        </div>
+    </div>
+        <div class="key-input-screen opposite"></div>
+        <div class="text-line bottom-line">
+        <div class="frame k1">
+                <img class="base" src="/img/key-base.svg" alt="">
+                <div class="recolor-overlay"></div>
+                <img class="button" src="/img/key-button.svg" alt="">
+                <div class="cover"></div>
+                <p class="text">D</p>
+            </div>
 
-        Promise.all([
-            typeLine(lines[0], 40),
-            typeLine(lines[1], 40)
-        ]);
-    }
+        <div class="frame k2">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">U</p>
+        </div>
 
-    const tagline = document.querySelector(".tagline");
+        <div class="frame k3">
+            <img class="base" src="/img/key-base.svg" alt="">
+            <div class="recolor-overlay"></div>
+            <img class="button" src="/img/key-button.svg" alt="">
+            <div class="cover"></div>
+            <p class="text">A</p>
+        </div>
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            inView = entry.isIntersecting;
-        });
-    }, { threshold: 0.5 });
+        <div class="frame k4">
+            <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">L</p>
+                            </div>
 
-    if (trigger){
-        observer.observe(trigger);
-    }
-    window.addEventListener("scroll", () => {
-        if (inView && !started){
-            startTyping();
-        }
-    });
+                            <div class="title-gap" aria-hidden="true"></div>
 
-    const topLetters = document.querySelectorAll(".top-line .letter");
-    const bottomLetters = document.querySelectorAll(".bottom-line .letter");
+                            <div class="frame k5">
+                                <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">I</p>
+                            </div>
 
-    letters.forEach((letter, index) => {
-        letter.addEventListener("mouseenter", () => {
-            topLetters[index].classList.add("active");
-            bottomLetters[index].classList.add("active");
-        });
+                            <div class="frame k6">
+                                <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">N</p>
+                            </div>
 
-        letter.addEventListener("mouseleave", () => {
-            topLetters[index].classList.remove("active");
-            bottomLetters[index].classList.remove("active");
-        });
-    });
+                            <div class="frame k7">
+                                <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">P</p>
+                            </div>
 
-    bottomLetters.forEach((letter, index) => {
-        letter.addEventListener("mouseenter", () => {
-            topLetters[index].classList.add("active");
-            bottomLetters[index].classList.add("active");
-        });
+                            <div class="frame k8">
+                                <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">U</p>
+                            </div>
 
-        letter.addEventListener("mouseleave", () => {
-            topLetters[index].classList.remove("active");
-            bottomLetters[index].classList.remove("active");
-        });
-    });
-});
- 
-</script>
+                            <div class="frame k9">
+                                <img class="base" src="/img/key-base.svg" alt="">
+                                <div class="recolor-overlay"></div>
+                                <img class="button" src="/img/key-button.svg" alt="">
+                                <div class="cover"></div>
+                                <p class="text">T</p>
+                            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div class ="footer-grid">
+        <div class="footer-left">
+            <p class="footer-text">
+            {{ text.footer | default("© 2026 ID24 Technology") }}
+            </p>
+            <p class="footer-subtext">
+            Dual input technology for shared systems, independent touch and multi-screen interaction.
+            </p>
+        </div>
+</div>

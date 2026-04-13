@@ -1,0 +1,458 @@
+:root {
+  --key-size: 8.5vh;
+  --key-gap: 0.8vh;
+  --key-font: 1.8vh;
+}
+
+.info-box-1,
+.info-box-2,
+.info-box-3,
+.info-animation-1,
+.info-animation-2,
+.info-animation-3 {
+    padding:2vw;
+}
+
+.info-animation-1,
+.info-animation-2,
+.info-animation-3 {
+    min-width: 0;
+}
+
+.info-box-1,
+.info-box-2,
+.info-box-3{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.info-box-1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: black;
+}
+
+.info-box-2 {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: black;
+}
+
+.info-box-3 {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: black;
+}
+
+.info-animation-1{
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.info-animation-2{
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.info-animation-3{
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.info-text-header{
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 1.5vh;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.info-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 1vh;
+    max-width: 60ch;
+}
+
+.animation-built1used2 {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    gap: 1vw;
+}
+
+.built1used2-laptop {
+    position: relative;
+    width: 28vw;
+    height: calc(28vw * 10 / 16);
+    border-radius: 0.9vh;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 34%),
+        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.09), transparent 45%),
+        black;
+    border: 0;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+        inset 0 0 2.2vh rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.26),
+        0 1vh 2.4vh rgba(255, 255, 255, 0.18),
+        0 0 2.4vh rgba(255, 255, 255, 0.18);
+}
+
+.built1used2-screen {
+    position: relative;
+    width: 14vw;
+    height: calc(14vw * 3 / 4);
+    border-radius: 0.9vh;
+    background: black;
+    border: 0;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 1vh 2.4vh rgba(255, 255, 255, 0.16),
+        0 0 1.8vh rgba(255, 255, 255, 0.14);
+    margin: 1vw;
+}
+
+.animation-built1used2::before {
+    content: "NO DUAL INPUT";
+    position: absolute;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.56);
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    z-index: 3;
+}
+
+.animation-built1used2::after {
+    content: "";
+    position: absolute;
+    width: 3.2vw;
+    height: 0.2vh;
+    left: 61%;
+    top: 50%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.26) 0 0.45vw,
+        transparent 0.45vw 0.85vw
+    );
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+
+.built1used2-cursor1 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 56%;
+    left: 32%;
+    background: white;
+    filter: drop-shadow(0 0 0.8vh rgba(255, 255, 255, 0.45));
+    animation: cursor-jump-between-systems 8s steps(1, end) infinite;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        0 100%,
+        30% 70%,
+        45% 100%,
+        55% 95%,
+        40% 65%,
+        100% 65%
+    );
+
+    pointer-events: none;
+}
+
+.built1used2-cursor2 {
+    display: none;
+}
+
+@keyframes cursor-jump-between-systems {
+    0%,
+    24% {
+        top: 56%;
+        left: 32%;
+        opacity: 1;
+    }
+
+    25%,
+    49% {
+        top: 34%;
+        left: 70%;
+        opacity: 1;
+    }
+
+    50%,
+    74% {
+        top: 68%;
+        left: 28%;
+        opacity: 1;
+    }
+
+    75%,
+    100% {
+        top: 46%;
+        left: 77%;
+        opacity: 1;
+    }
+}
+
+.animation-built1used2,
+.animation-ownSession {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.animation-ownSession {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.animation-ownSession::before {
+    content: "WITH DUAL INPUT";
+    position: absolute;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.56);
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    z-index: 3;
+}
+
+.ownSession-laptop {
+    position: relative;
+    width: 28vw;
+    height: calc(28vw * 10 / 16);
+    border-radius: 0.9vh;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 34%),
+        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.09), transparent 45%),
+        black;
+    border: 0;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+        inset 0 0 2.2vh rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.26),
+        0 1vh 2.4vh rgba(255, 255, 255, 0.18),
+        0 0 2.4vh rgba(255, 255, 255, 0.18);
+}
+
+.ownSession-screen {
+    position: relative;
+    width: 14vw;
+    height: calc(14vw * 3 / 4);
+    border-radius: 0.9vh;
+    background: black;
+    border: 0;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 1vh 2.4vh rgba(255, 255, 255, 0.16),
+        0 0 1.8vh rgba(255, 255, 255, 0.14);
+    margin: 1vw;
+}
+
+.ownSession-cursor1 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 58%;
+    left: 22%;
+    background: white;
+    filter: drop-shadow(0 0 0.8vh rgba(255, 255, 255, 0.45));
+    animation: own-session-cursor-left 10s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        0 100%,
+        30% 70%,
+        45% 100%,
+        55% 95%,
+        40% 65%,
+        100% 65%
+    );
+
+    pointer-events: none;
+}
+
+.ownSession-cursor2 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 36%;
+    left: 76%;
+    background: white;
+    filter: drop-shadow(0 0 0.8vh rgba(255, 255, 255, 0.45));
+    animation: own-session-cursor-right 9.5s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        0 100%,
+        30% 70%,
+        45% 100%,
+        55% 95%,
+        40% 65%,
+        100% 65%
+    );
+
+    pointer-events: none;
+}
+
+@keyframes own-session-cursor-left {
+    0%,
+    100% {
+        top: 58%;
+        left: 22%;
+    }
+
+    28% {
+        top: 34%;
+        left: 40%;
+    }
+
+    58% {
+        top: 66%;
+        left: 45%;
+    }
+
+    82% {
+        top: 44%;
+        left: 16%;
+    }
+}
+
+@keyframes own-session-cursor-right {
+    0%,
+    100% {
+        top: 36%;
+        left: 76%;
+    }
+
+    30% {
+        top: 66%;
+        left: 86%;
+    }
+
+    62% {
+        top: 46%;
+        left: 69%;
+    }
+
+    84% {
+        top: 60%;
+        left: 80%;
+    }
+}
+
+.animation-company {
+    position: relative;
+    width: 100%;
+    min-height: calc(var(--key-size) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-button-link{
+    position: relative;
+    z-index: 1;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.68) 58%, rgba(255, 255, 255, 0.4)),
+        white;
+    color: transparent;
+    border: 0;
+    clip-path: polygon(
+        0 0,
+        0 100%,
+        30% 70%,
+        45% 100%,
+        55% 95%,
+        40% 65%,
+        100% 65%
+    );
+    box-shadow: inset 0 0 0 0.22vh black;
+    filter:
+        drop-shadow(0 0 0.35vh rgba(255, 255, 255, 0.86))
+        drop-shadow(0 0 1vh rgba(255, 255, 255, 0.48))
+        drop-shadow(0 0 2.2vh rgba(255, 255, 255, 0.3));
+    font-size: 0;
+    text-decoration: none;
+    width: calc(var(--key-size) * 1.35);
+    height: calc(var(--key-size) * 1.35);
+    display: block;
+    transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.screen-button-link:hover {
+  transform: scale(1.08);
+  background:
+    linear-gradient(135deg, white, rgba(255, 255, 255, 0.78) 58%, rgba(255, 255, 255, 0.48)),
+    white;
+  filter:
+    drop-shadow(0 0 0.48vh rgba(255, 255, 255, 0.98))
+    drop-shadow(0 0 1.3vh rgba(255, 255, 255, 0.62))
+    drop-shadow(0 0 2.8vh rgba(255, 255, 255, 0.38));
+}
+
+.screen-button-link::after {
+  content: "";
+  position: absolute;
+  inset: 0.22vh;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.68) 58%, rgba(255, 255, 255, 0.4)),
+    white !important;
+  border-color: white !important;
+  clip-path: inherit;
+}
+
+.screen-button-link:active {
+  transform: scale(0.92);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.56) 58%, rgba(255, 255, 255, 0.34)),
+    white;
+  filter:
+    drop-shadow(0 0 0.45vh rgba(255, 255, 255, 0.72))
+    drop-shadow(0 0 1.1vh rgba(255, 255, 255, 0.46))
+    drop-shadow(0 0.8vh 2vh rgba(255, 255, 255, 0.22))
+    drop-shadow(0 0 2.4vh rgba(255, 255, 255, 0.22));
+}
+
+.company-link-label {
+    position: absolute;
+    top: calc(50% + (var(--key-size) * 1.35 * 0.52));
+    left: calc(50% + (var(--key-size) * 1.35 * 0.08) + 1vw);
+    right: 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: normal;
+    z-index: 1;
+}

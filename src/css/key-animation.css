@@ -1,0 +1,284 @@
+/* Key animation and key-look styles consolidated here */
+
+
+
+.animation-section{
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    height:900px;
+    margin-top: 150px;
+}
+
+.dual-input-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dual-stage {
+    position: relative;
+}
+
+.text-line {
+    display: flex;    
+}
+
+.k1 { left: 10px;   top: 30px; }
+.k2 { left: -10px;  top: 87.06px; }
+.k3 { left: -20px; top: 144.12px; }
+.k4 { left: -30px; top: 201.06px; }
+.k5 { left: -750px; top: 130px; }
+.k6 { left: -760px; top: 187.06px; }
+.k7 { left: -770px; top: 244.12px; }
+.k8 { left: -780px; top: 301.18px; }
+.k9 { left: -790px; top: 358.24px; }
+
+.tk1 { left: 10px;   top: 30px; }
+.tk2 { left: -10px;  top: 87.06px; }
+.tk3 { left: -20px; top: 144.12px; }
+.tk4 { left: -30px; top: 201.06px; }
+.tk5 { left: -750px; top: 130px; }
+.tk6 { left: -760px; top: 187.06px; }
+.tk7 { left: -770px; top: 244.12px; }
+.tk8 { left: -780px; top: 301.18px; }
+.tk9 { left: -790px; top: 358.24px; }
+
+.top-line {
+    position: absolute;
+    top: 320px;
+    margin-top: 10px;
+    
+}
+
+.bottom-line {
+    position: absolute;
+    top: 400px;
+    left: 250px;
+    margin-bottom: 10px;
+}
+
+.mirrored-axis {
+    transform: rotate(180deg);
+}
+
+.frame {
+  position: relative;
+  width: 160px;
+  height: 160px;
+
+  --hover-travel: 3px;
+  --press-travel: 14px;
+
+  --color: black;
+  --brightness: 1;
+  --blend-mode: color;
+
+  --transition-duration: 0.4s;
+  --transition-easing: linear(
+    0, 0.008 1.1%, 0.031 2.2%, 0.129 4.8%, 0.257 7.2%, 0.671 14.2%,
+    0.789 16.5%, 0.881 18.6%, 0.957 20.7%, 1.019 22.9%, 1.063 25.1%,
+    1.094 27.4%, 1.114 30.7%, 1.112 34.5%, 1.018 49.9%, 0.99 59.1%, 1
+  );
+}
+
+.frame,
+.recolor-overlay,
+.button,
+.text {
+  user-select: none;
+  z-index:1;
+}
+
+.top-line .frame {
+  transform: rotate(180deg);
+}
+
+.top-line .text {
+    transform: rotate(180deg) scaleY(-1)
+    rotateY(0deg) rotateX(-132.3deg) rotateZ(29deg)
+    translateY(24%) translateX(14%);
+}
+
+.base {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.recolor-overlay {
+  position: absolute;
+  inset: 0;
+  color: var(--color);
+  mix-blend-mode: var(--blend-mode);
+
+  transition-property: all;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+}
+
+.button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(var(--brightness));
+
+  transition-property: all;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frame:hover .button,
+.frame:hover .text,
+.frame:hover .recolor-overlay {
+  margin-top: var(--hover-travel);
+}
+
+.frame:active .button,
+.frame:active .text,
+.frame:active .recolor-overlay {
+  margin-top: var(--press-travel);
+}
+
+/* programmatic press state (used by JS) */
+.frame.pressed .button,
+.frame.pressed .text,
+.frame.pressed .recolor-overlay {
+  margin-top: var(--press-travel);
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  white-space: nowrap;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  align-content: center;
+  translate: -50% -50%;
+  transform: rotateY(0deg) rotateX(52.3deg) rotateZ(29deg)
+    translateY(-28%) translateX(-16%);
+  margin: 0;
+  padding: 0;
+
+  transition-property: all;
+  transition-timing-function: var(--transition-easing);
+  transition-duration: var(--transition-duration);
+  z-index: 10;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+
+.key-look {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    user-select: none;
+}
+
+.key-base,
+.key-corner,
+.key-button {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.key-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: black;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.key-look .key-button,
+.key-look .key-corner,
+.key-look .key-label {
+    transition: transform 0.18s ease;
+}
+
+.key-look:hover .key-button,
+.key-look:hover .key-corner,
+.key-look:hover .key-label {
+    transform: translateY(3px);
+}
+
+.key-look:active .key-button,
+.key-look:active .key-corner,
+.key-look:active .key-label {
+    transform: translateY(10px);
+}
+
+.title-gap {
+    width: 22px;
+    flex: 0 0 22px;
+}
+
+
+.key-input-screen{
+    position: absolute;
+
+    top: 470px;
+    left: 390px;
+
+    transform: rotateX(-30deg) rotateY(-36deg) rotateZ(0deg);
+
+    width: 600px;
+    height: 40px;
+
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+    z-index:30;
+    text-transform: rotate(180deg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:2em;
+}
+
+.opposite{
+    position: absolute;
+    top: 390px;
+    left: 780px;
+    transform: rotateX(-30deg) rotateY(144deg) rotateZ(0deg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:2em;
+}
+
+

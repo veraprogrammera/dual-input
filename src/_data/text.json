@@ -1,16 +1,40 @@
 {
+    "topbar":{
+        "left": "DUAL INPUT",
+        "right": "ID24 Technology"
+    },
+    
+    "explanation": "Two users interacting on the same system, at the same time, without interference.",
+
     "header":{
         "title": "Dual Input"
      },
+
      "tagline": {
-            "tag1": "Two users. One system.",
-            "tag2": "Write from anywhere.",
-            "tag3": "On different screens.",
-            "tag4": "At the same time.",
-            "tag5": "No interference.",
-            "tag6": "Just flow"
+            "tag": "Removing the single-user limitation",
+            "text": "Every system assumes a single user. Dual input is the technology that changes that assumption and everything that follows from it."
         },
-        
+
+    "info-1":{
+        "title": "Built for one. Used by two",
+        "paragraph1": "Operating systems are built around one cursor. One input, one session, one person in control.",
+        "paragraph2": "The moment a second user touches a second screen, the inputs collide. The cursor jumps. Control goes to whoever touched last.",
+        "paragraph3":"It's not a bug. It's the default, and it affects every setup where two people need to interact with the same system at once."
+    },
+
+    "info-2":{
+        "title": "Each screen gets its own session",
+        "paragraph1": "Dual input handles each input source independently, at the system level, below any application.",
+        "paragraph2": "Each screen gets its own input context. Both users interact freely. Neither interrupts the other.",
+        "paragraph3": "It works across touchscreens and external displays. Nothing to configure. It just works."
+    },
+
+    "info-3":{
+        "title": "The company that solved it",
+        "paragraph1": "ID24 identified the dual input problem early, and built the solution from the ground up. Their technology is patented, deployed in real enterprise environments, and purpose-built for situations where two people share one system.",
+        "paragraph2": "From retail terminals to medicing signing, wherever a second screen meets a second user, ID24 makes it work."
+    },
+
      "link": {
          "href": "/dual-input/",
          "text": "Go to Dual Input"

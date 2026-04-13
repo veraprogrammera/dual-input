@@ -4,9 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/keyboard-css@1.2.4/dist/css/main.min.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/new-animation.css">
+  <link rel="stylesheet" href="/css/screen-animation.css">
+  <link rel="stylesheet" href="/css/tagline.css">
+  <link rel="stylesheet" href="/css/info.css">
+  <link rel="stylesheet" href="/css/topbar.css">
+  {% if page.url == '/dual-input/' %}
+  <link rel="stylesheet" href="/css/key-animation.css">
+  {% endif %}
 </head>
 <body>
   {{ content | safe }}
+  {% if page.url == '/dual-input/' %}
+  <script src="/js/dual-input.js" defer></script>
+  <script src="/js/key-look.js" defer></script>
+  <script src="/js/new-animation.js" defer></script>
+  {% endif %}
 </body>
 </html>
