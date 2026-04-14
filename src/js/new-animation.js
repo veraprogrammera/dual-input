@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 150);
   }
 
-  const demoSequence = ["D", "U", "A", "L", " ", "I", "N", "P", "U", "T", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE"];
+  const demoSequence = ["D", "U", "O", " ", "I", "N", "P", "U", "T", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE", "BACKSPACE"];
 
   let i = 0;
 

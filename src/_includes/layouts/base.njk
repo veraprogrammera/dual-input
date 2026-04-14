@@ -6,7 +6,7 @@
   <title>{{ title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/keyboard-css@1.2.4/dist/css/main.min.css">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/css/new-animation.css">
@@ -20,10 +20,14 @@
 </head>
 <body>
   {{ content | safe }}
+  <script src="/js/topbar.js" defer></script>
   {% if page.url == '/dual-input/' %}
   <script src="/js/dual-input.js" defer></script>
   <script src="/js/key-look.js" defer></script>
   <script src="/js/new-animation.js" defer></script>
+  {% endif %}
+  {% if page.url == '/dual-input/use-cases/' %}
+  <script src="/js/signature-usecase.js" defer></script>
   {% endif %}
 </body>
 </html>

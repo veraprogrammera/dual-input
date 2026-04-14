@@ -7,6 +7,7 @@ html, body {
     padding: 0;
     background-color: black;
     color: white; /* så att text syns */
+    font-family: "Open Sans", Arial, sans-serif;
 }
 
 main {
@@ -50,7 +51,7 @@ main {
 }
 
 /*.header-title {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: #1c1513;
     font-weight: 470; 
     font-size: 4em;
@@ -87,6 +88,593 @@ main {
     margin-bottom: 26vh;
 }
 
+.use-cases-link-section {
+    margin: 6vh auto 18vh;
+    max-width: 82ch;
+    text-align: center;
+}
+
+.eyebrow-text {
+    margin: 0 0 1.2vh;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.use-cases-link-heading,
+.use-cases-title,
+.use-cases-panel h2 {
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.use-cases-link-heading {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.use-cases-link-copy {
+    margin: 2vh auto 3vh;
+    max-width: 58ch;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.1rem;
+}
+
+.primary-text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8rem;
+    padding: 0 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 8px;
+    color: black;
+    background: white;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.primary-text-button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.84);
+}
+
+.secondary-text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8rem;
+    padding: 0 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 8px;
+    color: white;
+    background: transparent;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.secondary-text-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.use-cases-page {
+    padding-bottom: 0;
+}
+
+.use-cases-intro {
+    max-width: 96ch;
+    min-height: 80vh;
+    margin: 0 auto 8vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.use-cases-title {
+    margin: 0 auto;
+    max-width: 13ch;
+    text-align: center;
+    font-size: 7.8vh;
+    font-weight: 500;
+    line-height: 0.95;
+    white-space: normal;
+}
+
+.use-cases-lead {
+    max-width: 68ch;
+    margin: 4vh auto 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.45rem;
+    line-height: 1.55;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4vh;
+}
+
+.use-cases-proof-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 auto 16vh;
+    text-align: center;
+}
+
+.use-cases-proof-strip p {
+    margin: 0;
+    padding: 0;
+}
+
+.use-cases-proof-strip strong,
+.use-cases-proof-strip span {
+    display: block;
+}
+
+.use-cases-proof-strip strong {
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.use-cases-proof-strip span {
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 0.95rem;
+}
+
+.section-heading-block {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto 9vh;
+    text-align: left;
+}
+
+.section-heading-block h2 {
+    margin: 0;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    max-width: 13ch;
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.signature-usecase-animation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto 26vh;
+    perspective: 450px;
+}
+
+.signature-screen {
+    position: relative;
+    min-height: 35vh;
+    height: 100%;
+    padding: var(--screen-padding);
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 8px;
+    background: black;
+    border: 0;
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.28),
+        0 1.4vh 3.6vh rgba(255, 255, 255, 0.28),
+        0 0 2.8vh rgba(255, 255, 255, 0.24);
+}
+
+.signature-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.1), transparent 48%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.signature-screen-form {
+    transform: rotateY(-8deg);
+    transform-origin: right center;
+    animation: float-left-screen 8s cubic-bezier(0.45, 0, 0.25, 1.18) infinite;
+}
+
+.signature-screen-sign {
+    transform: rotateY(8deg);
+    transform-origin: left center;
+    animation: float-right-screen 8s cubic-bezier(0.45, 0, 0.25, 1.18) infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature-screen-sign .signature-screen-label {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.signature-screen-label {
+    margin: 0 0 2vh;
+    color: rgba(255, 255, 255, 0.58);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.signature-usecase-animation .signature-input-screen {
+    width: calc((5 * var(--key-size)) + (4 * 5px));
+    max-width: calc(100% - 4rem);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 0;
+}
+
+.signature-output {
+    letter-spacing: 0.2em;
+    text-align: left;
+    width: 100%;
+}
+
+.signature-form-line {
+    width: 78%;
+    height: 0.3rem;
+    margin-bottom: 2.2rem;
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 0.6rem 0 rgba(255, 255, 255, 0.08);
+}
+
+.signature-form-line-short {
+    width: 52%;
+}
+
+.signature-form-line-long {
+    width: 88%;
+}
+
+.signature-left-signature-line {
+    width: calc((5 * var(--key-size)) + (4 * 5px));
+    max-width: calc(100% - 4rem);
+    min-height: 7vh;
+    margin: 2vh auto 0;
+    border-bottom: rgba(255, 255, 255, 0.45) 0.18vh solid;
+    position: relative;
+}
+
+.signature-keys {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    width: calc((5 * var(--key-size)) + (4 * 5px));
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+}
+
+.signature-stroke {
+    width: 82%;
+    min-height: 16vh;
+    margin-top: 4vh;
+    overflow: visible;
+}
+
+.signature-stroke-left {
+    position: absolute;
+    left: 50%;
+    bottom: -1.4rem;
+    width: 58%;
+    min-height: 7vh;
+    margin-top: 0;
+    transform: translateX(-50%);
+}
+
+.signature-stroke-customer {
+    width: 78%;
+    min-height: 18vh;
+    margin-top: 0;
+}
+
+.signature-stroke path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.88);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+    filter: drop-shadow(0 0 0.8vh rgba(255, 255, 255, 0.32));
+    animation: draw-signature 5.6s ease-in-out infinite;
+}
+
+@keyframes draw-signature {
+    0%,
+    20% {
+        stroke-dashoffset: 620;
+    }
+
+    60%,
+    86% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 620;
+    }
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15vh;
+    margin-top: 0;
+    margin-bottom: 26vh;
+}
+
+.use-cases-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+    min-width: 0;
+    padding: 0;
+    overflow: visible;
+    isolation: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    transition: none;
+    box-shadow: none;
+}
+
+.use-cases-panel::after {
+    content: "";
+    position: absolute;
+    top: -5.5vh;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.82),
+        rgba(255, 255, 255, 0.26) 28%,
+        transparent
+    );
+}
+
+.use-cases-panel:first-child::after {
+    top: -3.5vh;
+}
+
+.use-cases-panel:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.use-cases-panel::before {
+    content: none;
+}
+
+.use-cases-panel h2 {
+    position: sticky;
+    top: 18vh;
+    margin: 0;
+    max-width: 11ch;
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.use-cases-panel h2::before {
+    content: attr(data-section-label);
+    display: block;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.58);
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.use-cases-panel > :not(h2) {
+    grid-column: 2;
+}
+
+.use-cases-panel > h2 + * {
+    margin-top: 0;
+}
+
+.use-cases-panel .technical-panel-copy {
+    max-width: 34ch;
+    margin: 0 0 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.use-cases-panel p,
+.use-cases-panel li,
+.use-cases-panel summary {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.use-cases-panel details {
+    margin-top: 5px;
+    border: 0;
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.115), rgba(255, 255, 255, 0.04));
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 1vh 2.6vh rgba(255, 255, 255, 0.08);
+    transition: background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.use-cases-panel details:hover,
+.use-cases-panel details[open] {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.055));
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.13),
+        0 1.2vh 3vh rgba(255, 255, 255, 0.1);
+}
+
+.use-cases-panel summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 4.35rem;
+    padding: 1.15rem 3.6rem 1.15rem 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    list-style: none;
+}
+
+.use-cases-panel summary::-webkit-details-marker {
+    display: none;
+}
+
+.use-cases-panel summary::before {
+    content: none;
+}
+
+.use-cases-panel summary::after {
+    content: "+";
+    position: absolute;
+    right: 0.85rem;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.use-cases-panel details[open] summary::after {
+    content: "-";
+}
+
+.use-cases-panel details p {
+    margin: 0;
+    padding: 0 3.6rem 1.6rem 1.4rem;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.panel-button {
+    margin-top: 0.4rem;
+}
+
+.use-cases-panel ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.use-cases-panel li {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.use-cases-panel li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 1rem;
+    height: 1rem;
+    background: rgba(255, 255, 255, 0.88);
+    filter: drop-shadow(0 0 0.45vh rgba(255, 255, 255, 0.42));
+    clip-path: polygon(0 0, 0 100%, 30% 70%, 45% 100%, 55% 95%, 40% 65%, 100% 65%);
+}
+
+.use-cases-panel li + li {
+    margin-top: 1.2vh;
+}
+
+.technical-grid {
+    margin-top: 0;
+}
+
+@media (max-width: 760px) {
+    .signature-usecase-animation,
+    .use-cases-grid,
+    .use-cases-proof-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .use-cases-panel {
+        grid-template-columns: 1fr;
+        gap: 2.8rem;
+    }
+
+    .use-cases-panel h2 {
+        position: static;
+        max-width: none;
+        font-size: 2.6rem;
+    }
+
+    .use-cases-panel > :not(h2) {
+        grid-column: 1;
+    }
+
+    .use-cases-title {
+        font-size: 3.4rem;
+        white-space: normal;
+    }
+
+    .use-cases-lead {
+        font-size: 1.15rem;
+    }
+
+    .section-heading-block h2 {
+        font-size: 2.2rem;
+    }
+}
+
 .footer-grid{
     position: relative;
     display: grid;
@@ -118,18 +706,37 @@ main {
 }
 
 .footer-left {
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 5vh;
+    align-self: end;
+}
+
+.footer-right {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: end;
+    align-self: end;
+    max-width: 34ch;
 }
 
 .footer-text,
-.footer-subtext {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+.footer-subtext,
+.footer-heading {
+    font-family: "Open Sans", Arial, sans-serif;
     color: white;
     margin: 0;
+}
+
+.footer-heading {
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
 .footer-text {
@@ -146,6 +753,35 @@ main {
     max-width: 52ch;
 }
 
+.footer-contact {
+    margin-top: 1.4vh;
+}
+
+.footer-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-contact-links a {
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+@media (max-width: 760px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        row-gap: 4vh;
+    }
+
+    .footer-left,
+    .footer-right {
+        grid-column: 1;
+        justify-self: start;
+    }
+}
+
 .cursor-link-label {
     position: fixed;
     z-index: 2000;
@@ -157,7 +793,7 @@ main {
     box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.22),
         0 0.45vh 1vh rgba(255, 255, 255, 0.12);
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.04em;

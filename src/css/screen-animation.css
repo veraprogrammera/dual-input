@@ -106,7 +106,7 @@
   overflow: hidden;
   font-size: 3.6vh;
   letter-spacing: 0.2em;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   color: rgba(255, 255, 255, 0.78);
 }
 
@@ -121,7 +121,7 @@
     0 0.45vh 1vh rgba(255, 255, 255, 0.12),
     0 0 0.9vh rgba(255, 255, 255, 0.1);
 
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.5vw;
   font-weight: 380;
 
@@ -137,8 +137,10 @@
 }
 
 .screen-button.key-wide {
-  grid-column: 5;
+  grid-column: 4 / -1;
   grid-row: 1;
+  width: auto;
+  justify-self: stretch;
   padding: 0;
   font-size: 2vh;
 }

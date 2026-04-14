@@ -1,14 +1,18 @@
 ---
 layout: layouts/base.njk
-title: Dual Input
+title: Duo Input
 permalink: /dual-input/
 ---
 <div id="top"></div>
 <div class ="topbar">
     <div class="topbarleft">
-        <a href="#top" class="topbarbutton topbartext">
-            {{ text.topbar.left | default("DUAL INPUT") }}
+        <a href="/dual-input/" class="topbarbutton topbartext">
+            {{ text.topbar.left | default("DUO INPUT") }}
         </a>
+        <nav class="topbar-scroll-nav" aria-label="Duo Input page navigation">
+            <a href="/dual-input/use-cases/" class="topbarbutton topbartext">For businesses</a>
+            <a href="/dual-input/technical/" class="topbarbutton topbartext">Technical details</a>
+        </nav>
     </div>
 
     <div class="topbarcenter">
@@ -36,8 +40,7 @@ permalink: /dual-input/
             <div class="keys">
                     <button class="screen-button" data-key="D">D</button>
                     <button class="screen-button" data-key="U">U</button>
-                    <button class="screen-button" data-key="A">A</button>
-                    <button class="screen-button" data-key="L">L</button>
+                    <button class="screen-button" data-key="O">O</button>
 
                     <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
 
@@ -48,7 +51,6 @@ permalink: /dual-input/
                     <button class="screen-button" data-key="T">T</button>
 
                     <button class ="screen-button key-blancspace" data-key=" "> </button>
-
             </div>
         </div>
 
@@ -59,8 +61,7 @@ permalink: /dual-input/
             <div class="keys"> 
                 <button class="screen-button" data-key="D">D</button>
                 <button class="screen-button" data-key="U">U</button>
-                <button class="screen-button" data-key="A">A</button>
-                <button class="screen-button" data-key="L">L</button>
+                <button class="screen-button" data-key="O">O</button>
                     
                 <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
 
@@ -76,6 +77,15 @@ permalink: /dual-input/
 
     </div>
 </div>
+
+<section class="use-cases-link-section" aria-labelledby="use-cases-link-heading">
+    <p class="eyebrow-text">Two screens. Two users. One seamless experience.</p>
+    <h2 class="use-cases-link-heading" id="use-cases-link-heading">Duo Input in real setups</h2>
+    <p class="use-cases-link-copy">
+        See how simultaneous input supports forms, data entry, digital signatures and customer-facing displays.
+    </p>
+    <a class="primary-text-button" href="/dual-input/use-cases/">See user cases</a>
+</section>
 
 <!---
 <div class ="tagline-first">
@@ -135,10 +145,10 @@ permalink: /dual-input/
 
     <div class = "info-animation-3">
         <div class ="animation-company">
-            <a href="https://id24.com/" class="screen-button-link" aria-label="Go to ID24 website">
+            <a href="/dual-input/technical/" class="screen-button-link" aria-label="Go to technical details">
                 {{ text.companylink | default("ID24") }}
             </a>
-            <p class="company-link-label">Click to visit ID24 website</p>
+            <p class="company-link-label">Click for technical details</p>
         </div> 
     </div>
 
@@ -308,7 +318,17 @@ permalink: /dual-input/
             {{ text.footer | default("© 2026 ID24 Technology") }}
             </p>
             <p class="footer-subtext">
-            Dual input technology for shared systems, independent touch and multi-screen interaction.
+            Duo Input technology for shared systems, independent touch and multi-screen interaction.
+            </p>
+        </div>
+        <div class="footer-right">
+            <h2 class="footer-heading">Contact us</h2>
+            <p class="footer-subtext footer-contact">
+            Ready for demos, integrations and partnerships.
+            </p>
+            <p class="footer-subtext footer-contact-links">
+                <a href="mailto:sales@id24.com">sales@id24.com</a>
+                <a href="https://www.id24.com/">www.id24.com</a>
             </p>
         </div>
 </div>

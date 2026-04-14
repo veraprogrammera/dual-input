@@ -70,7 +70,7 @@
 }
 
 .info-text-header{
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     color: white;
     font-size: 2.5em;
     margin-bottom: 1.5vh;
@@ -78,7 +78,7 @@
     text-transform: uppercase;
 }
 .info-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: white;
     font-size: 1.3em;
     margin-bottom: 1vh;
@@ -127,13 +127,13 @@
 }
 
 .animation-built1used2::before {
-    content: "NO DUAL INPUT";
+    content: "NO DUO INPUT";
     position: absolute;
     top: 1vh;
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.56);
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -229,13 +229,13 @@
 }
 
 .animation-ownSession::before {
-    content: "WITH DUAL INPUT";
+    content: "WITH DUO INPUT";
     position: absolute;
     top: 1vh;
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.56);
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -405,10 +405,12 @@
     height: calc(var(--key-size) * 1.35);
     display: block;
     transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: technical-details-cursor-pulse 2.4s ease-in-out infinite;
 }
 
 .screen-button-link:hover {
   transform: scale(1.08);
+  animation-play-state: paused;
   background:
     linear-gradient(135deg, white, rgba(255, 255, 255, 0.78) 58%, rgba(255, 255, 255, 0.48)),
     white;
@@ -448,11 +450,44 @@
     right: 0;
     margin: 0;
     color: rgba(255, 255, 255, 0.68);
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     white-space: normal;
     z-index: 1;
+    animation: technical-details-label-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes technical-details-cursor-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        filter:
+            drop-shadow(0 0 0.35vh rgba(255, 255, 255, 0.86))
+            drop-shadow(0 0 1vh rgba(255, 255, 255, 0.48))
+            drop-shadow(0 0 2.2vh rgba(255, 255, 255, 0.3));
+    }
+
+    50% {
+        transform: scale(1.06);
+        filter:
+            drop-shadow(0 0 0.55vh rgba(255, 255, 255, 0.98))
+            drop-shadow(0 0 1.45vh rgba(255, 255, 255, 0.72))
+            drop-shadow(0 0 3vh rgba(255, 255, 255, 0.44));
+    }
+}
+
+@keyframes technical-details-label-pulse {
+    0%,
+    100% {
+        color: rgba(255, 255, 255, 0.68);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        color: rgba(255, 255, 255, 0.96);
+        text-shadow: 0 0 1.2vh rgba(255, 255, 255, 0.42);
+    }
 }

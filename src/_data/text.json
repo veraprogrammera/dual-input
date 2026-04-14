@@ -1,18 +1,18 @@
 {
     "topbar":{
-        "left": "DUAL INPUT",
+        "left": "DUO INPUT",
         "right": "ID24 Technology"
     },
     
     "explanation": "Two users interacting on the same system, at the same time, without interference.",
 
     "header":{
-        "title": "Dual Input"
+        "title": "Duo Input"
      },
 
      "tagline": {
             "tag": "Removing the single-user limitation",
-            "text": "Every system assumes a single user. Dual input is the technology that changes that assumption and everything that follows from it."
+            "text": "Every system assumes a single user. Duo Input is the technology that changes that assumption and everything that follows from it."
         },
 
     "info-1":{
@@ -24,19 +24,19 @@
 
     "info-2":{
         "title": "Each screen gets its own session",
-        "paragraph1": "Dual input handles each input source independently, at the system level, below any application.",
+        "paragraph1": "Duo Input handles each input source independently, at the system level, below any application.",
         "paragraph2": "Each screen gets its own input context. Both users interact freely. Neither interrupts the other.",
         "paragraph3": "It works across touchscreens and external displays. Nothing to configure. It just works."
     },
 
     "info-3":{
         "title": "The company that solved it",
-        "paragraph1": "ID24 identified the dual input problem early, and built the solution from the ground up. Their technology is patented, deployed in real enterprise environments, and purpose-built for situations where two people share one system.",
+        "paragraph1": "ID24 identified the Duo Input problem early, and built the solution from the ground up. Their technology is patented, deployed in real enterprise environments, and purpose-built for situations where two people share one system.",
         "paragraph2": "From retail terminals to medicing signing, wherever a second screen meets a second user, ID24 makes it work."
     },
 
      "link": {
          "href": "/dual-input/",
-         "text": "Go to Dual Input"
+         "text": "Go to Duo Input"
     }
 }
