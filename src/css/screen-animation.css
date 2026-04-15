@@ -30,7 +30,12 @@
   min-height: 35vh;
   height: 100%;
   padding: var(--screen-padding);
-  background: black;
+  background:
+    linear-gradient(135deg, rgba(215, 255, 63, 0.08), transparent 22%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    black;
+  background-size: auto, 2rem 2rem, 2rem 2rem, auto;
   border-radius: var(--screen-radius);
   overflow: hidden;
   cursor: none;
@@ -38,13 +43,43 @@
   border: 0;
   box-shadow:
     0 0 0 2px rgba(255, 255, 255, 0.28),
-    0 1.4vh 3.6vh rgba(255, 255, 255, 0.28),
-    0 0 2.8vh rgba(255, 255, 255, 0.24);
+    0 1.4vh 3.6vh rgba(255, 255, 255, 0.22),
+    0 0 3.8vh rgba(215, 255, 63, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+}
+
+.left-screen::before,
+.right-screen::before {
+  content: "LIVE INPUT";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: rgba(215, 255, 63, 0.72);
+  font-family: "Oswald", "Open Sans", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.left-screen::after,
+.right-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  opacity: 0.28;
+  transform: translateY(-100%);
+  animation: screen-scan 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.right-screen::after {
+  animation-delay: -2.6s;
 }
 
 .left-screen{
@@ -158,11 +193,12 @@
 
 .screen-button.pressed {
   transform: scale(0.98);
-  background: #242424;
+  background: #1b2114;
+  color: rgba(215, 255, 63, 0.92);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.34),
-    0 0.35vh 0.9vh rgba(255, 255, 255, 0.2),
-    0 0 1.2vh rgba(255, 255, 255, 0.18);
+    0 0 0 1px rgba(215, 255, 63, 0.44),
+    0 0.35vh 0.9vh rgba(215, 255, 63, 0.2),
+    0 0 1.2vh rgba(215, 255, 63, 0.18);
 }
 
 .screen-button.key-blancspace{
@@ -244,5 +280,17 @@
 
   50% {
     transform: translateY(-0.45rem);
+  }
+}
+
+@keyframes screen-scan {
+  0%,
+  26% {
+    transform: translateY(-100%);
+  }
+
+  52%,
+  100% {
+    transform: translateY(100%);
   }
 }

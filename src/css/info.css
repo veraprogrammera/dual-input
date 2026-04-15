@@ -22,9 +22,24 @@
 .info-box-1,
 .info-box-2,
 .info-box-3{
+    position: relative;
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 
+    counter-increment: infoSection;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.info-box-1::before,
+.info-box-2::before,
+.info-box-3::before {
+    content: "0" counter(infoSection);
+    margin-bottom: 1.2rem;
+    color: rgba(215, 255, 63, 0.82);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1;
 }
 
 .info-box-1 {
@@ -72,15 +87,17 @@
 .info-text-header{
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
     color: white;
-    font-size: 2.5em;
+    font-size: 3rem;
+    line-height: 0.95;
     margin-bottom: 1.5vh;
     font-weight: 500;
     text-transform: uppercase;
 }
 .info-text {
     font-family: "Open Sans", Arial, sans-serif;
-    color: white;
-    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.08rem;
+    line-height: 1.65;
     margin-bottom: 1vh;
     max-width: 60ch;
 }
@@ -163,6 +180,12 @@
     gap: 1vw;
 }
 
+.animation-built1used2,
+.animation-ownSession,
+.animation-company {
+    filter: saturate(1.08);
+}
+
 .built1used2-laptop {
     position: relative;
     width: 28vw;
@@ -201,7 +224,7 @@
     top: 1vh;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.56);
+    color: rgba(215, 255, 63, 0.74);
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -291,7 +314,7 @@
     top: 1vh;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.56);
+    color: rgba(215, 255, 63, 0.74);
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
