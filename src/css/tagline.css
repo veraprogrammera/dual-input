@@ -26,3 +26,32 @@
     width: 50%;
     text-align: justify;
 }
+
+@media (max-width: 760px) {
+    .typing-line {
+        font-size: 2rem;
+        margin-right: 0;
+    }
+
+    .header {
+        max-width: 11ch;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 0.98;
+        overflow-wrap: break-word;
+    }
+
+    .tag {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.45;
+        text-align: left;
+    }
+}
+
+@media (max-width: 390px) {
+    .header {
+        font-size: 2.45rem;
+    }
+}

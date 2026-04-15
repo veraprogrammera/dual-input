@@ -192,7 +192,11 @@
   .right-screen {
     grid-column: 1;
     transform: none;
-    animation: none;
+    animation: mobile-screen-float 7s ease-in-out infinite;
+  }
+
+  .right-screen {
+    animation-delay: -3.5s;
   }
 
   .input-screen {
@@ -229,5 +233,16 @@
 
   .screen-text {
     font-size: 1.25rem;
+  }
+}
+
+@keyframes mobile-screen-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.45rem);
   }
 }

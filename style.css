@@ -743,7 +743,11 @@ main {
     .signature-screen-form,
     .signature-screen-sign {
         transform: none;
-        animation: none;
+        animation: mobile-screen-float 7s ease-in-out infinite;
+    }
+
+    .signature-screen-sign {
+        animation-delay: -3.5s;
     }
 
     .signature-screen-sign {

@@ -493,6 +493,12 @@
 }
 
 @media (max-width: 760px) {
+    :root {
+        --key-size: 3.15rem;
+        --key-gap: 5px;
+        --screen-padding: 1rem;
+    }
+
     .info-box-1,
     .info-box-2,
     .info-box-3,
@@ -560,6 +566,10 @@
 }
 
 @media (max-width: 390px) {
+    :root {
+        --key-size: 2.65rem;
+    }
+
     .animation-built1used2,
     .animation-ownSession {
         min-height: 13rem;
