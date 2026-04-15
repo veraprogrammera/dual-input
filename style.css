@@ -535,23 +535,19 @@ main {
 
 .use-cases-panel details {
     margin-top: 5px;
-    border: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 8px;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.115), rgba(255, 255, 255, 0.04));
-    box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-        0 1vh 2.6vh rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: none;
     transition: background 0.18s ease, box-shadow 0.18s ease;
+    overflow: hidden;
 }
 
 .use-cases-panel details:hover,
 .use-cases-panel details[open] {
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.055));
-    box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.13),
-        0 1.2vh 3vh rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .use-cases-panel summary {
@@ -563,6 +559,7 @@ main {
     min-height: 4.35rem;
     padding: 1.15rem 3.6rem 1.15rem 1.4rem;
     color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
     cursor: pointer;
     list-style: none;
 }
@@ -600,7 +597,7 @@ main {
 
 .use-cases-panel details p {
     margin: 0;
-    padding: 0 3.6rem 1.6rem 1.4rem;
+    padding: 0 3.6rem 1.35rem 1.4rem;
     color: rgba(255, 255, 255, 0.68);
 }
 
@@ -639,33 +636,10 @@ main {
     margin-top: 0;
 }
 
-@media (max-width: 760px) {
-    html {
-        --page-inline-margin: 1rem;
-    }
-
-    main {
-        padding-inline: var(--page-inline-margin);
-    }
-
-    .screen-animation {
-        height: auto;
-        min-height: 0;
-        margin: 4vh 0 12vh;
-        align-items: flex-start;
-    }
-
-    .tagline {
-        height: auto;
-        min-height: 8rem;
-        padding: 2rem 0;
-    }
-
+@media (max-width: 1200px) {
     .info-grid {
         grid-template-columns: 1fr;
         row-gap: 5rem;
-        margin-top: 8vh;
-        margin-bottom: 18vh;
     }
 
     .info-box-1,
@@ -700,10 +674,43 @@ main {
     .info-animation-3 {
         grid-row: 6;
     }
+}
+
+@media (max-width: 1200px) {
+    html {
+        --page-inline-margin: 1rem;
+    }
+
+    main {
+        padding-inline: var(--page-inline-margin);
+    }
+
+    .screen-animation {
+        height: auto;
+        min-height: 0;
+        margin: 4vh 0 12vh;
+        align-items: flex-start;
+    }
+
+    .tagline {
+        height: auto;
+        min-height: 8rem;
+        padding: 2rem 0;
+    }
+
+    .info-grid {
+        margin-top: 8vh;
+        margin-bottom: 18vh;
+    }
 
     .use-cases-link-section {
+        width: min(100%, 34rem);
         margin: 2vh auto 14vh;
         text-align: left;
+    }
+
+    .use-cases-link-section .primary-text-button {
+        justify-self: flex-start;
     }
 
     .use-cases-link-heading {
@@ -962,7 +969,7 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.34);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 980px) {
     .footer-grid {
         grid-template-columns: 1fr;
         row-gap: 4vh;

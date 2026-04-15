@@ -12,27 +12,28 @@
 
      "tagline": {
             "tag": "Removing the single-user limitation",
-            "text": "Every system assumes a single user. Duo Input is the technology that changes that assumption and everything that follows from it."
+            "text": "Duo Input lets staff and customers use separate displays at the same time. One system keeps running, while each person gets the input space they need."
         },
 
     "info-1":{
         "title": "Built for one. Used by two",
-        "paragraph1": "Operating systems are built around one cursor. One input, one session, one person in control.",
-        "paragraph2": "The moment a second user touches a second screen, the inputs collide. The cursor jumps. Control goes to whoever touched last.",
-        "paragraph3":"It's not a bug. It's the default, and it affects every setup where two people need to interact with the same system at once."
+        "paragraph1": "Customer-facing systems often need two people to work at once: staff keeping the case moving, and a customer entering details, confirming choices or signing.",
+        "paragraph2": "Most operating systems still treat that as one shared input session. The cursor jumps, focus moves, and one person interrupts the other.",
+        "paragraph3":"That creates waiting, repeated instructions and awkward handoffs in moments where the experience should feel calm and professional."
     },
 
     "info-2":{
         "title": "Each screen gets its own session",
-        "paragraph1": "Duo Input handles each input source independently, at the system level, below any application.",
-        "paragraph2": "Each screen gets its own input context. Both users interact freely. Neither interrupts the other.",
-        "paragraph3": "It works across touchscreens and external displays. Nothing to configure. It just works."
+        "paragraph1": "Duo Input handles multiple input sources independently at system level, below the application layer.",
+        "paragraph2": "The service screen stays usable while the customer screen receives its own touch, typing or signature input.",
+        "paragraph3": "One workflow can stay visible across two displays, while each person interacts with the part of the process meant for them."
     },
 
     "info-3":{
         "title": "The company that solved it",
-        "paragraph1": "ID24 identified the Duo Input problem early, and built the solution from the ground up. Their technology is patented, deployed in real enterprise environments, and purpose-built for situations where two people share one system.",
-        "paragraph2": "From retail terminals to medicing signing, wherever a second screen meets a second user, ID24 makes it work."
+        "paragraph1": "Forms, confirmations and digital signatures can happen in parallel with staff work instead of stopping it.",
+        "paragraph2": "The technology is patented, built by ID24 and intended for real environments where shared systems need reliable multi-display input.",
+        "paragraph3": "From service counters to signing workflows, Duo Input makes two-user interaction feel like one continuous experience."
     },
 
      "link": {
