@@ -640,29 +640,203 @@ main {
 }
 
 @media (max-width: 760px) {
+    html {
+        --page-inline-margin: 1rem;
+    }
+
+    main {
+        padding-inline: var(--page-inline-margin);
+    }
+
+    .screen-animation {
+        height: auto;
+        min-height: 0;
+        margin: 4vh 0 12vh;
+        align-items: flex-start;
+    }
+
+    .tagline {
+        height: auto;
+        min-height: 8rem;
+        padding: 2rem 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+        margin-top: 8vh;
+        margin-bottom: 18vh;
+    }
+
+    .info-box-1,
+    .info-box-2,
+    .info-box-3,
+    .info-animation-1,
+    .info-animation-2,
+    .info-animation-3 {
+        grid-column: 1;
+    }
+
+    .info-box-1 {
+        grid-row: 1;
+    }
+
+    .info-animation-1 {
+        grid-row: 2;
+    }
+
+    .info-box-2 {
+        grid-row: 3;
+    }
+
+    .info-animation-2 {
+        grid-row: 4;
+    }
+
+    .info-box-3 {
+        grid-row: 5;
+    }
+
+    .info-animation-3 {
+        grid-row: 6;
+    }
+
+    .use-cases-link-section {
+        margin: 2vh auto 14vh;
+        text-align: left;
+    }
+
+    .use-cases-link-heading {
+        font-size: 2rem;
+        line-height: 1.05;
+    }
+
+    .use-cases-link-copy {
+        font-size: 1rem;
+    }
+
+    .use-cases-intro {
+        min-height: 58vh;
+        margin-bottom: 8vh;
+    }
+
     .signature-usecase-animation,
     .use-cases-grid,
     .use-cases-proof-strip {
         grid-template-columns: 1fr;
     }
 
+    .signature-usecase-animation {
+        width: 100%;
+        height: auto;
+        gap: 2rem;
+        margin-bottom: 14vh;
+        perspective: none;
+    }
+
+    .signature-screen {
+        min-height: 24rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .signature-screen-form,
+    .signature-screen-sign {
+        transform: none;
+        animation: none;
+    }
+
+    .signature-screen-sign {
+        min-height: 18rem;
+    }
+
+    .signature-screen-sign .signature-screen-label {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .signature-usecase-animation .signature-input-screen,
+    .signature-left-signature-line,
+    .signature-keys {
+        width: calc((5 * var(--key-size)) + (4 * 5px));
+        max-width: 100%;
+    }
+
+    .signature-left-signature-line {
+        min-height: 4.8rem;
+        margin-top: 1rem;
+    }
+
+    .signature-keys {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .signature-stroke-left {
+        width: 70%;
+        bottom: -1rem;
+    }
+
+    .signature-stroke-customer {
+        width: 88%;
+        min-height: 9rem;
+    }
+
+    .use-cases-proof-strip {
+        gap: 2rem;
+        margin-bottom: 14vh;
+    }
+
+    .use-cases-proof-strip strong {
+        font-size: 1.85rem;
+    }
+
+    .use-cases-grid {
+        gap: 8rem;
+        margin-bottom: 18vh;
+    }
+
     .use-cases-panel {
         grid-template-columns: 1fr;
-        gap: 2.8rem;
+        gap: 1.4rem;
     }
 
     .use-cases-panel h2 {
         position: static;
         max-width: none;
-        font-size: 2.6rem;
+        font-size: 2.25rem;
+        line-height: 1.04;
     }
 
     .use-cases-panel > :not(h2) {
         grid-column: 1;
     }
 
+    .use-cases-panel p,
+    .use-cases-panel li,
+    .use-cases-panel summary {
+        font-size: 1rem;
+    }
+
+    .use-cases-panel summary {
+        min-height: 3.6rem;
+        padding: 0.85rem 3rem 0.85rem 1rem;
+    }
+
+    .use-cases-panel details p {
+        padding: 0 3rem 1rem 1rem;
+    }
+
+    .use-cases-panel summary::after {
+        right: 0.6rem;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
     .use-cases-title {
-        font-size: 3.4rem;
+        max-width: 12ch;
+        font-size: 3rem;
         white-space: normal;
     }
 
@@ -672,6 +846,21 @@ main {
 
     .section-heading-block h2 {
         font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .use-cases-title {
+        font-size: 2.45rem;
+    }
+
+    .use-cases-panel h2,
+    .section-heading-block h2 {
+        font-size: 2rem;
+    }
+
+    .use-cases-panel summary {
+        padding-right: 2.65rem;
     }
 }
 

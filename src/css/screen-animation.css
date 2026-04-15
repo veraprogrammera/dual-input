@@ -9,7 +9,9 @@
 
 @media (max-width: 700px) {
   :root {
-    --key-size: 5vh;
+    --key-size: 3.15rem;
+    --key-gap: 5px;
+    --screen-padding: 1rem;
   }
 }
 
@@ -168,4 +170,64 @@
     width: auto;
     height: calc(var(--key-size) * 0.82);
     justify-self: stretch;
+}
+
+@media (max-width: 760px) {
+  .dual-screens {
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    perspective: none;
+  }
+
+  .left-screen,
+  .right-screen {
+    min-height: 22rem;
+    height: auto;
+    cursor: default;
+  }
+
+  .left-screen,
+  .right-screen {
+    grid-column: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .input-screen {
+    width: calc((5 * var(--key-size)) + (4 * 5px));
+    max-width: 100%;
+    min-height: 4.4rem;
+    margin: 1.2rem 0;
+    padding: 0 0.65rem;
+  }
+
+  .screen-text {
+    font-size: 1.45rem;
+  }
+
+  .screen-button {
+    font-size: 1.05rem;
+    border-radius: 8px;
+  }
+
+  .screen-button.key-wide {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --key-size: 2.65rem;
+  }
+
+  .left-screen,
+  .right-screen {
+    min-height: 20rem;
+  }
+
+  .screen-text {
+    font-size: 1.25rem;
+  }
 }

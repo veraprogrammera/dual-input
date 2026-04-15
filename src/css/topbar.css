@@ -101,12 +101,65 @@ html {
 }
 
 @media (max-width: 760px) {
+    .topbar {
+        grid-template-columns: 1fr auto;
+        min-height: 3.25rem;
+        height: auto;
+        margin-bottom: 6vh;
+        padding-top: 0.7rem;
+    }
+
     .topbarleft,
     .topbar-scroll-nav {
         gap: 0.85rem;
     }
 
+    .topbarleft {
+        grid-column: 1;
+        flex-wrap: wrap;
+        row-gap: 0.4rem;
+        align-items: flex-start;
+        min-width: 0;
+    }
+
+    .topbarcenter {
+        display: none;
+    }
+
+    .topbarright {
+        grid-column: 2;
+    }
+
+    .topbarleft > .topbarbutton.topbartext {
+        margin-left: 1rem;
+    }
+
+    .topbarright .topbartext {
+        margin-right: 1rem;
+    }
+
+    .topbartext {
+        font-size: 0.9rem;
+        line-height: 1.1;
+    }
+
     .topbar-scroll-nav .topbartext {
         font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .topbar {
+        grid-template-columns: 1fr;
+        row-gap: 0.35rem;
+    }
+
+    .topbarright {
+        display: none;
+    }
+
+    .topbar-scroll-nav {
+        flex-basis: 100%;
+        padding-left: 1rem;
     }
 }
