@@ -4,26 +4,28 @@ html {
 
 .topbar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.15fr) minmax(10rem, 0.7fr);
     grid-row: 1;
-    height: 2vh;
+    min-height: 3.4rem;
+    height: auto;
     justify-content: space-between;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    margin-bottom: 10vh;
-    padding-top: 0.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(0, 0, 0, 0.44);
+    margin-bottom: 8vh;
+    padding: 0.75rem 0 0.55rem;
+    border-bottom: 1px solid rgba(11, 48, 53, 0.18);
+    background: rgba(243, 244, 242, 0.84);
 }
 
 .topbarleft {
     grid-column: 1;
     display: flex;
     align-items: flex-start;
-    gap: 1.6rem;
+    gap: clamp(1rem, 2vw, 2rem);
+    min-width: 0;
 }
 
 .topbarleft > .topbarbutton.topbartext {
@@ -33,7 +35,8 @@ html {
 .topbar-scroll-nav {
     display: flex;
     align-items: flex-start;
-    gap: 1.6rem;
+    gap: clamp(1rem, 2vw, 2rem);
+    min-width: 0;
     transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
 }
 
@@ -74,11 +77,13 @@ html {
 
 .topbartext {
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
-    color: white;
+    color: var(--ink);
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 450;
     margin: 0;
+    line-height: 1.08;
+    white-space: nowrap;
 }
 
 .topbarleft > .topbarbutton.topbartext {
@@ -100,7 +105,7 @@ html {
 }
 
 .topbarbutton:hover {
-    color: var(--signal);
+    color: var(--id24-orange);
     font-style: normal;
 }
 

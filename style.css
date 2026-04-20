@@ -2,7 +2,7 @@ html {
     --page-inline-margin: 5vh;
     --edge-line: rgba(255, 255, 255, 0.18);
     --soft-line: rgba(255, 255, 255, 0.08);
-    --signal: #ffb000;
+    --signal: #ffd817;
 }
 
 html, body {
@@ -46,7 +46,7 @@ body::after {
     z-index: 0;
     pointer-events: none;
     background:
-        linear-gradient(115deg, transparent 0 42%, rgba(255, 176, 0, 0.08) 48%, transparent 56%),
+        linear-gradient(115deg, transparent 0 42%, rgba(255, 216, 23, 0.08) 48%, transparent 56%),
         linear-gradient(180deg, transparent 0 18%, rgba(255, 255, 255, 0.06), transparent 38%);
     animation: page-signal-sweep 12s ease-in-out infinite;
 }
@@ -230,14 +230,14 @@ main {
     letter-spacing: 0;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 0 0 0 rgba(255, 176, 0, 0);
+    box-shadow: 0 0 0 rgba(255, 216, 23, 0);
     transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .primary-text-button:hover {
     transform: translateY(-3px) skewX(-6deg);
     background: var(--signal);
-    box-shadow: 0 0 2rem rgba(255, 176, 0, 0.18);
+    box-shadow: 0 0 2rem rgba(255, 216, 23, 0.18);
 }
 
 .secondary-text-button {
@@ -414,7 +414,7 @@ main {
 
 .signature-screen-label {
     margin: 0 0 2vh;
-    color: rgba(255, 255, 255, 0.58);
+    color: white;
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -510,7 +510,7 @@ main {
 
 .signature-stroke-customer path {
     stroke: var(--signal);
-    filter: drop-shadow(0 0 1vh rgba(255, 176, 0, 0.42));
+    filter: drop-shadow(0 0 1vh rgba(255, 216, 23, 0.42));
 }
 
 @keyframes draw-signature {
@@ -641,11 +641,11 @@ main {
 
 .use-cases-panel details:hover,
 .use-cases-panel details[open] {
-    border-color: rgba(255, 176, 0, 0.38);
+    border-color: rgba(255, 216, 23, 0.38);
     background: rgba(255, 255, 255, 0.075);
     box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-        0 0 1.5rem rgba(255, 176, 0, 0.08);
+        0 0 1.5rem rgba(255, 216, 23, 0.08);
 }
 
 .use-cases-panel summary {
@@ -773,6 +773,43 @@ main {
     .info-animation-3 {
         grid-row: 6;
     }
+}
+
+/* Keep supporting pages readable in the same ID24 palette */
+.use-cases-page {
+    color: var(--ink);
+}
+
+.use-cases-title,
+.use-cases-panel h2,
+.use-cases-proof-strip strong,
+.signature-screen-label,
+.use-cases-panel summary {
+    color: var(--ink);
+}
+
+.signature-screen .signature-screen-label {
+    color: white;
+}
+
+.use-cases-lead,
+.use-cases-proof-strip span,
+.use-cases-panel p,
+.use-cases-panel li,
+.use-cases-panel .technical-panel-copy {
+    color: #171717;
+}
+
+.use-cases-panel details,
+.use-cases-panel details:hover,
+.use-cases-panel details[open] {
+    border-color: var(--edge-line);
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: none;
+}
+
+.use-cases-panel details[open] summary::after {
+    background: var(--signal);
 }
 
 @media (max-width: 1200px) {
@@ -1101,4 +1138,397 @@ main {
 .cursor-link-label.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ID24 PDF-inspired light landing page */
+html {
+    --page-inline-margin: clamp(1rem, 4vw, 3rem);
+    --paper: #f3f4f2;
+    --ink: #0b3035;
+    --ink-soft: #355158;
+    --id24-orange: var(--signal);
+    --signal: #ffd817;
+    --blue-detail: #0066b3;
+    --red-detail: #c7363a;
+    --edge-line: rgba(11, 48, 53, 0.18);
+    --soft-line: rgba(11, 48, 53, 0.08);
+}
+
+html,
+body {
+    background:
+        linear-gradient(90deg, rgba(11, 48, 53, 0.035) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(11, 48, 53, 0.03) 1px, transparent 1px),
+        var(--paper);
+    background-size: 3rem 3rem;
+    color: var(--ink);
+}
+
+body::before {
+    background:
+        linear-gradient(90deg, transparent 0 80%, rgba(255, 216, 23, 0.1)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.72), transparent 28rem);
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+
+body::after {
+    background:
+        linear-gradient(115deg, transparent 0 44%, rgba(255, 216, 23, 0.18) 50%, transparent 58%);
+    opacity: 0.32;
+    animation: none;
+}
+
+.duo-landing {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.landing-hero {
+    display: block;
+    max-width: 980px;
+    min-height: 0;
+    padding: 8vh 0 6vh;
+}
+
+.landing-eyebrow,
+.section-kicker,
+.eyebrow-text {
+    color: var(--ink);
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.landing-hero h1,
+.landing-section h2,
+.final-cta h2 {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-weight: 500;
+    line-height: 0.95;
+    text-transform: none;
+}
+
+.landing-hero h1 {
+    max-width: 11ch;
+    font-size: clamp(4.2rem, 8vw, 8.25rem);
+}
+
+.landing-lead,
+.landing-section p,
+.landing-section li,
+.contact-microcopy {
+    color: #171717;
+    font-size: 1.12rem;
+    line-height: 1.58;
+}
+
+.landing-lead {
+    max-width: 48rem;
+    margin: 2rem 0 0;
+    font-size: 1.22rem;
+}
+
+.hero-signature-animation {
+    width: 100%;
+    height: min(62vh, 42rem);
+    margin: 0 auto 9vh;
+    padding: clamp(1rem, 2vw, 2rem);
+    box-sizing: border-box;
+    border: 1px solid var(--edge-line);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.landing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.2rem;
+}
+
+.primary-text-button {
+    border-color: var(--ink);
+    color: white;
+    background: var(--ink);
+}
+
+.primary-text-button:hover {
+    color: var(--ink);
+    background: var(--signal);
+    box-shadow: 0 0 0 4px rgba(255, 216, 23, 0.2);
+}
+
+.secondary-text-button {
+    border-color: var(--ink);
+    color: var(--ink);
+}
+
+.secondary-text-button:hover {
+    border-color: var(--id24-orange);
+    color: var(--ink);
+}
+
+.trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0 0 9vh;
+    padding: 1rem;
+    border-top: 1px solid var(--edge-line);
+    border-bottom: 1px solid var(--edge-line);
+}
+
+.trust-strip span {
+    flex: 1 1 13rem;
+    color: var(--ink);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.landing-section {
+    position: relative;
+    margin: 0 0 9vh;
+    padding: clamp(1.4rem, 3vw, 3rem);
+    border: 1px solid var(--edge-line);
+    background: rgba(255, 255, 255, 0.48);
+    box-sizing: border-box;
+}
+
+.landing-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.55rem;
+    height: 100%;
+    background: var(--ink);
+}
+
+.landing-section h2 {
+    max-width: 12ch;
+    font-size: clamp(2.6rem, 5vw, 5.2rem);
+}
+
+.two-column-section {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2rem, 6vw, 6rem);
+}
+
+.section-body p:first-child,
+.solution-panel p:first-of-type,
+.patent-panel p,
+.final-cta p {
+    font-size: 1.2rem;
+}
+
+.check-list {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 2.2rem;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--signal);
+    font-size: 1.7rem;
+    line-height: 1;
+    text-shadow: 0 1px 0 var(--ink);
+}
+
+.solution-panel {
+    background: var(--ink);
+}
+
+.solution-panel::before,
+.patent-panel::before,
+.final-cta::before {
+    background: var(--signal);
+}
+
+.solution-panel h2,
+.solution-panel p,
+.solution-panel .section-kicker,
+.patent-panel h2,
+.patent-panel p,
+.patent-panel .section-kicker,
+.final-cta h2,
+.final-cta p {
+    color: white;
+}
+
+.step-grid,
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.step-grid article,
+.feature-grid article,
+.faq-list details {
+    padding: 1.25rem;
+    border: 1px solid var(--edge-line);
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.step-grid span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+    background: var(--signal);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.35rem;
+}
+
+.step-grid h3,
+.feature-grid h3 {
+    margin: 0 0 0.7rem;
+    color: var(--ink);
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.signature-spotlight {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.75fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+}
+
+.spotlight-signature {
+    width: 100%;
+    min-height: 12rem;
+    border-bottom: 3px solid rgba(11, 48, 53, 0.28);
+}
+
+.spotlight-signature path {
+    fill: none;
+    stroke: var(--red-detail);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.spec-table {
+    border: 1px solid var(--edge-line);
+    background: white;
+}
+
+.spec-table p {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid var(--edge-line);
+}
+
+.spec-table p:last-child {
+    border-bottom: 0;
+}
+
+.spec-table span {
+    color: var(--ink-soft);
+    font-weight: 700;
+}
+
+.spec-table strong {
+    color: #171717;
+    font-weight: 600;
+}
+
+.spec-table .spec-note {
+    display: block;
+    color: var(--ink);
+    background: rgba(255, 216, 23, 0.16);
+}
+
+.faq-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.faq-list summary {
+    color: var(--ink);
+    cursor: pointer;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.faq-list p {
+    max-width: 78ch;
+}
+
+.patent-panel,
+.final-cta {
+    background: var(--ink);
+}
+
+.contact-microcopy {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-grid {
+    color: var(--ink);
+    background: var(--paper);
+    border-top: 1px solid var(--edge-line);
+}
+
+.footer-grid::before {
+    content: none;
+}
+
+.footer-text,
+.footer-subtext,
+.footer-heading,
+.footer-contact-links a {
+    color: var(--ink);
+}
+
+@media (max-width: 1200px) {
+    .landing-hero,
+    .two-column-section,
+    .signature-spotlight {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-hero {
+        min-height: 0;
+    }
+
+    .step-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-table p {
+        grid-template-columns: 1fr;
+    }
 }
