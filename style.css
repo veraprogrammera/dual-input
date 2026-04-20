@@ -1553,6 +1553,16 @@ body::after {
         grid-template-columns: 1fr;
     }
 
+    .hero-signature-animation {
+        height: auto;
+        min-height: 0;
+        margin-bottom: 6vh;
+    }
+
+    .hero-signature-animation .signature-screen {
+        min-height: 24rem;
+    }
+
     .trust-strip span {
         border-right: 0;
         border-bottom: 1px solid var(--edge-line);
