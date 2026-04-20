@@ -484,10 +484,10 @@ main {
 .signature-left-signature-line {
     position: absolute;
     left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
-    top: clamp(8.6rem, 40%, 10.25rem);
+    top: clamp(8.15rem, 35%, 9.15rem);
     width: calc((5 * var(--key-size)) + (4 * 5px));
     max-width: calc(100% - 4rem);
-    min-height: 3.25rem;
+    min-height: 2.65rem;
     margin: 0;
     border-bottom: rgba(255, 255, 255, 0.45) 0.18vh solid;
 }
@@ -512,9 +512,9 @@ main {
 .signature-stroke-left {
     position: absolute;
     left: 50%;
-    bottom: -0.55rem;
+    bottom: -0.42rem;
     width: 72%;
-    min-height: 4rem;
+    min-height: 3.45rem;
     margin-top: 0;
     transform: translateX(-50%);
 }
@@ -554,7 +554,7 @@ main {
 .signature-caption-left {
     position: absolute;
     left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
-    top: clamp(12.35rem, 56%, 13.6rem);
+    top: clamp(10.7rem, 44%, 11.1rem);
     width: calc((5 * var(--key-size)) + (4 * 5px));
     max-width: calc(100% - 4rem);
     margin: 0;
