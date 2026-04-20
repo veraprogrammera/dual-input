@@ -1441,7 +1441,7 @@ body::after {
 
 .spotlight-signature path {
     fill: none;
-    stroke: var(--red-detail);
+    stroke: var(--signal);
     stroke-width: 7;
     stroke-linecap: round;
     stroke-linejoin: round;
