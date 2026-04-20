@@ -82,6 +82,17 @@ document.addEventListener("DOMContentLoaded", () => { /* för annars hade inte .
   });
 
   const cursorLabelLinks = document.querySelectorAll("[data-cursor-label]");
+  const emailActions = document.querySelectorAll("[data-email-action]");
+
+  emailActions.forEach(action => {
+    action.addEventListener("click", event => {
+      event.preventDefault();
+
+      const address = `${action.dataset.mailName}@${action.dataset.mailHost}.${action.dataset.mailTld}`;
+      const subject = encodeURIComponent("Duo Input demo request");
+      window.location.href = `mailto:${address}?subject=${subject}`;
+    });
+  });
 
   if (cursorLabelLinks.length) {
     const cursorLabel = document.createElement("div");
