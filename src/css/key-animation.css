@@ -78,6 +78,7 @@
   --press-travel: 14px;
 
   --color: black;
+  --press-color: #ffb000;
   --brightness: 1;
   --blend-mode: color;
 
@@ -160,6 +161,21 @@
 .frame.pressed .text,
 .frame.pressed .recolor-overlay {
   margin-top: var(--press-travel);
+}
+
+.frame:active,
+.frame.pressed {
+  --color: var(--press-color);
+}
+
+.frame:active .text,
+.frame.pressed .text {
+  color: black;
+}
+
+.frame:active .button,
+.frame.pressed .button {
+  filter: brightness(1.12) saturate(1.18);
 }
 
 .text {
@@ -280,4 +296,3 @@
     font-family: "Open Sans", Arial, sans-serif;
     font-size:2em;
 }
-

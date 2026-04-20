@@ -6,18 +6,6 @@
     box-sizing: border-box;
 }
 
-.tagline::before {
-    content: "01 / SHARED INPUT";
-    position: absolute;
-    left: var(--page-inline-margin);
-    bottom: 0;
-    color: rgba(215, 255, 63, 0.82);
-    font-family: "Oswald", "Open Sans", Arial, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
 .typing-line {
     color: white;
     font-family: "Open Sans", Arial, sans-serif;

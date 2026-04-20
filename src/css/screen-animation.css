@@ -31,7 +31,7 @@
   height: 100%;
   padding: var(--screen-padding);
   background:
-    linear-gradient(135deg, rgba(215, 255, 63, 0.08), transparent 22%),
+    linear-gradient(135deg, rgba(255, 176, 0, 0.08), transparent 22%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     black;
@@ -44,7 +44,7 @@
   box-shadow:
     0 0 0 2px rgba(255, 255, 255, 0.28),
     0 1.4vh 3.6vh rgba(255, 255, 255, 0.22),
-    0 0 3.8vh rgba(215, 255, 63, 0.12);
+    0 0 3.8vh rgba(255, 176, 0, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  color: rgba(215, 255, 63, 0.72);
+  color: rgba(255, 176, 0, 0.72);
   font-family: "Oswald", "Open Sans", Arial, sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
@@ -86,7 +86,6 @@
     grid-column: 1;
     transform: rotateY(-8deg);
     transform-origin: right center;
-    animation: float-left-screen 8s cubic-bezier(0.45, 0, 0.25, 1.18) infinite;
     /*box-shadow: 0.8vw 0.8vw rgb(0, 0, 0, 0.25);*/
 }
 
@@ -94,29 +93,6 @@
     grid-column: 2;
     transform: rotateY(8deg);
     transform-origin: left center;
-    animation: float-right-screen 8s cubic-bezier(0.45, 0, 0.25, 1.18) infinite;
-}
-
-@keyframes float-left-screen {
-  0%,
-  100% {
-    transform: translateX(0) rotateY(-8deg);
-  }
-
-  50% {
-    transform: translateX(0.16vw) rotateY(-8deg);
-  }
-}
-
-@keyframes float-right-screen {
-  0%,
-  100% {
-    transform: translateX(0) rotateY(8deg);
-  }
-
-  50% {
-    transform: translateX(-0.16vw) rotateY(8deg);
-  }
 }
 
 .keys{
@@ -193,12 +169,12 @@
 
 .screen-button.pressed {
   transform: scale(0.98);
-  background: #1b2114;
-  color: rgba(215, 255, 63, 0.92);
+  background: #241800;
+  color: #ffb000;
   box-shadow:
-    0 0 0 1px rgba(215, 255, 63, 0.44),
-    0 0.35vh 0.9vh rgba(215, 255, 63, 0.2),
-    0 0 1.2vh rgba(215, 255, 63, 0.18);
+    0 0 0 1px rgba(255, 176, 0, 0.44),
+    0 0.35vh 0.9vh rgba(255, 176, 0, 0.2),
+    0 0 1.2vh rgba(255, 176, 0, 0.18);
 }
 
 .screen-button.key-blancspace{
@@ -228,11 +204,6 @@
   .right-screen {
     grid-column: 1;
     transform: none;
-    animation: mobile-screen-float 7s ease-in-out infinite;
-  }
-
-  .right-screen {
-    animation-delay: -3.5s;
   }
 
   .input-screen {
@@ -269,17 +240,6 @@
 
   .screen-text {
     font-size: 1.25rem;
-  }
-}
-
-@keyframes mobile-screen-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-0.45rem);
   }
 }
 

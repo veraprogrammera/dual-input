@@ -31,13 +31,10 @@ document.addEventListener("DOMContentLoaded", () => { /* för annars hade inte .
   }
 
   function startTyping() {
-    if (started) return;
+    if (started || !lines.length) return;
     started = true;
 
-    Promise.all([
-      typeLine(lines[0], 40),
-      typeLine(lines[1], 40)
-    ]);
+    Promise.all(Array.from(lines, line => typeLine(line, 40)));
   }
 
   const tagline = document.querySelector(".tagline");
