@@ -5,7 +5,27 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/dual-input/",
+      "destination": "/duoinput/",
+      "permanent": false
+    },
+    {
+      "source": "/dual-input",
+      "destination": "/duoinput/",
+      "permanent": false
+    },
+    {
+      "source": "/dual-input/",
+      "destination": "/duoinput/",
+      "permanent": false
+    },
+    {
+      "source": "/dual-input/use-cases/",
+      "destination": "/duoinput/businesses/",
+      "permanent": false
+    },
+    {
+      "source": "/dual-input/:path*",
+      "destination": "/duoinput/:path*",
       "permanent": false
     }
   ]
