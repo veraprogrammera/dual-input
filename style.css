@@ -356,9 +356,10 @@ main {
 
 .signature-usecase-animation {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(3rem, 7vw, 7rem);
-    width: min(100%, 1380px);
+    grid-template-columns: repeat(2, minmax(0, 38rem));
+    justify-content: center;
+    gap: clamp(2.75rem, 5vw, 5rem);
+    width: 100%;
     height: auto;
     margin: 0 auto 26vh;
     align-items: center;
@@ -367,9 +368,12 @@ main {
 
 .signature-screen {
     position: relative;
-    min-height: clamp(22rem, 30vw, 31rem);
-    height: auto;
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 38rem;
+    min-width: 0;
+    height: clamp(21.5rem, 25vw, 25.5rem);
+    min-height: 0;
+    aspect-ratio: auto;
     padding: var(--screen-padding);
     box-sizing: border-box;
     overflow: hidden;
@@ -398,13 +402,15 @@ main {
 }
 
 .signature-screen-form {
-    transform: perspective(1000px) rotateY(-4deg) scale(0.92);
-    transform-origin: left center;
+    justify-self: end;
+    transform: perspective(1000px) rotateY(-3.5deg);
+    transform-origin: center center;
 }
 
 .signature-screen-sign {
-    transform: perspective(1000px) rotateY(4deg) scale(0.92);
-    transform-origin: right center;
+    justify-self: start;
+    transform: perspective(1000px) rotateY(3.5deg);
+    transform-origin: center center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -427,12 +433,13 @@ main {
 }
 
 .signature-usecase-animation .signature-input-screen {
+    position: absolute;
+    left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
+    top: clamp(3.5rem, 12%, 4.4rem);
     width: calc((5 * var(--key-size)) + (4 * 5px));
     max-width: calc(100% - 4rem);
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 2.75rem;
+    margin: 0;
     justify-content: center;
     padding: 0;
 }
@@ -441,6 +448,21 @@ main {
     letter-spacing: 0.2em;
     text-align: left;
     width: 100%;
+}
+
+.signature-context-note {
+    position: absolute;
+    left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
+    top: clamp(6.9rem, 23%, 7.9rem);
+    width: calc((5 * var(--key-size)) + (4 * 5px));
+    max-width: calc(100% - 4rem);
+    margin: 0;
+    color: rgba(255, 255, 255, 0.66);
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .signature-form-line {
@@ -460,12 +482,14 @@ main {
 }
 
 .signature-left-signature-line {
+    position: absolute;
+    left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
+    top: clamp(8.6rem, 40%, 10.25rem);
     width: calc((5 * var(--key-size)) + (4 * 5px));
     max-width: calc(100% - 4rem);
-    min-height: 7vh;
-    margin: 2vh auto 0;
+    min-height: 3.25rem;
+    margin: 0;
     border-bottom: rgba(255, 255, 255, 0.45) 0.18vh solid;
-    position: relative;
 }
 
 .signature-keys {
@@ -480,7 +504,7 @@ main {
 
 .signature-stroke {
     width: 82%;
-    min-height: 16vh;
+    min-height: 8.5rem;
     margin-top: 4vh;
     overflow: visible;
 }
@@ -488,16 +512,16 @@ main {
 .signature-stroke-left {
     position: absolute;
     left: 50%;
-    bottom: -1.4rem;
-    width: 58%;
-    min-height: 7vh;
+    bottom: -0.55rem;
+    width: 72%;
+    min-height: 4rem;
     margin-top: 0;
     transform: translateX(-50%);
 }
 
 .signature-stroke-customer {
-    width: 76%;
-    min-height: 15vh;
+    width: 86%;
+    min-height: 8.5rem;
     margin-top: 1rem;
 }
 
@@ -507,8 +531,8 @@ main {
     stroke-width: 4.6;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 620;
-    stroke-dashoffset: 620;
+    stroke-dasharray: 760;
+    stroke-dashoffset: 760;
     filter: drop-shadow(0 0 0.8vh rgba(255, 255, 255, 0.32));
     animation: draw-signature 5.6s ease-in-out infinite;
 }
@@ -529,20 +553,20 @@ main {
 
 .signature-caption-left {
     position: absolute;
-    left: 50%;
-    bottom: calc(2rem + (3 * var(--key-size)) + 1.8rem);
+    left: calc(50% - ((5 * var(--key-size)) + (4 * 5px)) / 2);
+    top: clamp(12.35rem, 56%, 13.6rem);
     width: calc((5 * var(--key-size)) + (4 * 5px));
     max-width: calc(100% - 4rem);
     margin: 0;
-    transform: translateX(-50%);
-    text-align: center;
+    transform: none;
+    text-align: left;
     z-index: 2;
 }
 
 @keyframes draw-signature {
     0%,
     20% {
-        stroke-dashoffset: 620;
+        stroke-dashoffset: 760;
     }
 
     60%,
@@ -551,7 +575,7 @@ main {
     }
 
     100% {
-        stroke-dashoffset: 620;
+        stroke-dashoffset: 760;
     }
 }
 
@@ -1272,17 +1296,37 @@ body::after {
 }
 
 .hero-signature-animation {
-    --animation-side-margin: clamp(2rem, 5vw, 5rem);
-    --animation-optical-offset: clamp(1.5rem, 3vw, 3.5rem);
-    width: min(calc(100vw - (2 * var(--animation-side-margin))), 1320px);
+    --key-size: clamp(2.65rem, 3.2vw, 3.7rem);
+    width: min(100%, 1240px);
     height: auto;
-    margin: 0 0 9vh 50%;
+    margin: 0 auto 9vh;
     padding: 0;
     box-sizing: border-box;
     overflow: visible;
     border: 0;
     background: transparent;
-    transform: translateX(calc(-50% - var(--animation-optical-offset)));
+    transform: none;
+}
+
+.hero-signature-animation .screen-button {
+    font-size: clamp(0.78rem, 0.9vw, 1rem);
+}
+
+.hero-signature-animation .screen-button.key-wide {
+    font-size: clamp(0.72rem, 0.82vw, 0.94rem);
+}
+
+.use-cases-page .use-cases-title,
+.technical-page .use-cases-title {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.use-cases-page .two-column-section > div:first-child,
+.technical-page .two-column-section > div:first-child {
+    justify-self: start;
+    text-align: left;
 }
 
 .landing-actions {
@@ -1610,6 +1654,7 @@ body::after {
     }
 
     .hero-signature-animation .signature-screen {
+        height: auto;
         min-height: 22rem;
         aspect-ratio: 16 / 10;
     }

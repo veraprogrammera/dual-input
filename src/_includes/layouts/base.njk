@@ -14,19 +14,19 @@
   <link rel="stylesheet" href="/css/tagline.css">
   <link rel="stylesheet" href="/css/info.css">
   <link rel="stylesheet" href="/css/topbar.css">
-  {% if page.url == '/dual-input/' %}
+  {% if page.url == '/duoinput/' %}
   <link rel="stylesheet" href="/css/key-animation.css">
   {% endif %}
 </head>
 <body>
   {{ content | safe }}
   <script src="/js/topbar.js" defer></script>
-  {% if page.url == '/dual-input/' %}
+  {% if page.url == '/duoinput/' %}
   <script src="/js/dual-input.js" defer></script>
   <script src="/js/key-look.js" defer></script>
   <script src="/js/new-animation.js" defer></script>
   {% endif %}
-  {% if page.url == '/dual-input/' or page.url == '/dual-input/use-cases/' %}
+  {% if page.url == '/duoinput/' or page.url == '/duoinput/businesses/' %}
   <script src="/js/signature-usecase.js" defer></script>
   {% endif %}
 </body>
