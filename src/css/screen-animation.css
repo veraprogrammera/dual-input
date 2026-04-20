@@ -34,7 +34,7 @@
     linear-gradient(135deg, rgba(255, 216, 23, 0.14), transparent 24%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    #071f23;
+    var(--ink, #0b3035);
   background-size: auto, 2rem 2rem, 2rem 2rem, auto;
   border-radius: var(--screen-radius);
   overflow: hidden;

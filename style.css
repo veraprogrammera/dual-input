@@ -373,21 +373,24 @@ main {
     overflow: hidden;
     isolation: isolate;
     border-radius: 8px;
-    background: black;
-    border: 0;
+    background:
+        linear-gradient(135deg, rgba(255, 216, 23, 0.12), transparent 26%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        var(--ink);
+    background-size: auto, 2rem 2rem, 2rem 2rem, auto;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow:
-        0 0 0 2px rgba(255, 255, 255, 0.28),
-        0 1.4vh 3.6vh rgba(255, 255, 255, 0.28),
-        0 0 2.8vh rgba(255, 255, 255, 0.24);
+        0 0 0 2px rgba(11, 48, 53, 0.28),
+        0 1.4vh 3.6vh rgba(11, 48, 53, 0.22),
+        0 0 2.8vh rgba(255, 216, 23, 0.14);
 }
 
 .signature-screen::before {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 28%),
-        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.1), transparent 48%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 28%);
     pointer-events: none;
     z-index: -1;
 }
