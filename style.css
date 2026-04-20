@@ -1273,21 +1273,33 @@ body::after {
 }
 
 .trust-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
     margin: 0 0 9vh;
-    padding: 1rem;
-    border-top: 1px solid var(--edge-line);
-    border-bottom: 1px solid var(--edge-line);
+    padding: 0;
+    border: 1px solid var(--edge-line);
+    background: rgba(255, 255, 255, 0.42);
 }
 
 .trust-strip span {
-    flex: 1 1 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.25rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-right: 1px solid var(--edge-line);
     color: var(--ink);
     font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1.15rem;
     font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.trust-strip span:last-child {
+    border-right: 0;
 }
 
 .landing-section {
@@ -1526,6 +1538,19 @@ body::after {
     .step-grid,
     .feature-grid {
         grid-template-columns: 1fr;
+    }
+
+    .trust-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-strip span {
+        border-right: 0;
+        border-bottom: 1px solid var(--edge-line);
+    }
+
+    .trust-strip span:last-child {
+        border-bottom: 0;
     }
 
     .spec-table p {

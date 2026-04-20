@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const scrollNavs = document.querySelectorAll(".topbar-scroll-nav");
   const rightLinks = document.querySelectorAll(".topbarright");
+  const topbar = document.querySelector(".topbar");
   const frontInfoMore = document.querySelectorAll(".front-info-more");
   let frontInfoCollapsed = null;
+  let lastScrollY = window.scrollY;
 
-  if (!scrollNavs.length && !rightLinks.length && !frontInfoMore.length) {
+  if (!topbar && !scrollNavs.length && !rightLinks.length && !frontInfoMore.length) {
     return;
   }
 
@@ -27,16 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const updateTopbarNav = () => {
-    const shouldHide = window.scrollY > 64;
-    const shouldHideScrollNav = shouldHide && window.location.pathname === "/dual-input/";
+    const currentScrollY = window.scrollY;
+    const shouldHide = currentScrollY > 80 && currentScrollY > lastScrollY;
 
-    scrollNavs.forEach(nav => {
-      nav.classList.toggle("is-hidden", shouldHideScrollNav);
-    });
+    if (topbar) {
+      topbar.classList.toggle("is-hidden", shouldHide);
+    }
 
-    rightLinks.forEach(link => {
-      link.classList.toggle("is-hidden", shouldHide);
-    });
+    lastScrollY = currentScrollY;
   };
 
   updateFrontInfoDetails();
