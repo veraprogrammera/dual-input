@@ -7,7 +7,7 @@ permalink: /dual-input/
 <div class ="topbar">
     <div class="topbarleft">
         <a href="/dual-input/" class="topbarbutton topbartext">
-            {{ text.topbar.left | default("DUO INPUT") }}
+            Duo Input
         </a>
         <nav class="topbar-scroll-nav" aria-label="Duo Input page navigation">
             <a href="/dual-input/use-cases/" class="topbarbutton topbartext">For businesses</a>
@@ -15,329 +15,209 @@ permalink: /dual-input/
         </nav>
     </div>
 
-    <div class="topbarcenter">
-    </div> 
+    <div class="topbarcenter"></div> 
 
     <div class="topbarright" id="topbarRight">
-     <a href="https://id24.com/" class="topbarbutton topbartext company-link" data-cursor-label="Go to company website">
-            {{ text.topbar.right | default("ID24 Technology") }}
-     </a>
+        <a href="https://id24.com/" class="topbarbutton topbartext company-link" data-cursor-label="Go to company website">
+            ID24 Technology
+        </a>
     </div>
 </div>
 
-<header class="tagline"> 
-    <p class="header"> {{ text.tagline.tag }} </p>
-</header>
-
-
-<main>
-<div class="screen-animation"> 
-    <div class="dual-screens">
-        <div class="left-screen">
-            <div class="input-screen"> 
-                <div class="screen-text" id="sharedOutputLeft"> </div>
+<main class="duo-landing">
+    <section class="landing-hero">
+        <div class="landing-hero-copy">
+            <p class="landing-eyebrow">Duo Input™ — by ID24 · Patented</p>
+            <h1>Two screens. Two users. One seamless experience.</h1>
+            <p class="landing-lead">Duo Input™ is patented software that enables true simultaneous touch input across multiple displays — no cursor conflicts, no interruptions, no operating-system workarounds. Two people can work on two screens at the same time, and it just works.</p>
+            <div class="landing-actions">
+                <a class="primary-text-button" href="mailto:sales@id24.com?subject=Duo%20Input%20demo%20request">Request a demo</a>
+                <a class="secondary-text-button" href="/dual-input/technical/">See technical specs</a>
             </div>
-            <div class="keys">
-                    <button class="screen-button" data-key="D">D</button>
-                    <button class="screen-button" data-key="U">U</button>
-                    <button class="screen-button" data-key="O">O</button>
+        </div>
+    </section>
 
-                    <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
-
-                    <button class="screen-button" data-key="I">I</button>
-                    <button class="screen-button" data-key="N">N</button>
-                    <button class="screen-button" data-key="P">P</button>
-                    <button class="screen-button" data-key="U">U</button>
-                    <button class="screen-button" data-key="T">T</button>
-
-                    <button class ="screen-button key-blancspace" data-key=" "> </button>
+    <section class="signature-usecase-animation hero-signature-animation" aria-label="Duo Input signature workflow animation">
+        <div class="signature-screen signature-screen-form">
+            <p class="signature-screen-label">Service screen</p>
+            <div class="input-screen signature-input-screen">
+                <div class="screen-text signature-output" id="signatureUseCaseOutput"></div>
+            </div>
+            <div class="signature-left-signature-line">
+                <svg class="signature-stroke signature-stroke-left" viewBox="0 0 360 130" role="img" aria-label="Animated digital signature">
+                    <path d="M28 84 C56 32 78 118 105 70 S152 46 176 76 S232 116 257 62 S315 48 334 74" />
+                </svg>
+            </div>
+            <div class="keys signature-keys" aria-label="Duo Input keyboard">
+                <button class="screen-button signature-screen-button" data-signature-key="D">D</button>
+                <button class="screen-button signature-screen-button" data-signature-key="U">U</button>
+                <button class="screen-button signature-screen-button" data-signature-key="O">O</button>
+                <button class="screen-button signature-screen-button key-wide" data-signature-key="BACKSPACE">DEL</button>
+                <button class="screen-button signature-screen-button" data-signature-key="I">I</button>
+                <button class="screen-button signature-screen-button" data-signature-key="N">N</button>
+                <button class="screen-button signature-screen-button" data-signature-key="P">P</button>
+                <button class="screen-button signature-screen-button" data-signature-key="U">U</button>
+                <button class="screen-button signature-screen-button" data-signature-key="T">T</button>
+                <button class="screen-button signature-screen-button key-blancspace" data-signature-key=" "></button>
             </div>
         </div>
 
-        <div class="right-screen">
-            <div class="input-screen"> 
-                <div class="screen-text" id="sharedOutputRight"> </div>
-            </div>
-            <div class="keys"> 
-                <button class="screen-button" data-key="D">D</button>
-                <button class="screen-button" data-key="U">U</button>
-                <button class="screen-button" data-key="O">O</button>
-                    
-                <button class="screen-button key-wide" data-key="BACKSPACE">⌫</button>
-
-                <button class="screen-button" data-key="I">I</button>
-                <button class="screen-button" data-key="N">N</button>
-                <button class="screen-button" data-key="P">P</button>
-                <button class="screen-button" data-key="U">U</button>
-                <button class="screen-button" data-key="T">T</button>
-
-                <button class ="screen-button key-blancspace" data-key=" "> </button>
-            </div>
+        <div class="signature-screen signature-screen-sign">
+            <p class="signature-screen-label">Customer screen</p>
+            <svg class="signature-stroke signature-stroke-customer" viewBox="0 0 360 130" role="img" aria-label="Animated digital signature">
+                <path d="M28 84 C56 32 78 118 105 70 S152 46 176 76 S232 116 257 62 S315 48 334 74" />
+            </svg>
         </div>
+    </section>
 
-    </div>
-</div>
+    <section class="trust-strip" aria-label="Duo Input trust facts">
+        <span>Patented technology</span>
+        <span>Windows 10, Windows 11, and Linux</span>
+        <span>Works offline</span>
+        <span>Developed for retail, hospitality, and banking</span>
+    </section>
 
-<section class="use-cases-link-section" aria-labelledby="use-cases-link-heading">
-    <p class="eyebrow-text">Two screens. Two users. One seamless experience.</p>
-    <h2 class="use-cases-link-heading" id="use-cases-link-heading">Duo Input in real setups</h2>
-    <p class="use-cases-link-copy">
-        See how simultaneous input supports forms, data entry, digital signatures and customer-facing displays.
-    </p>
-    <a class="primary-text-button" href="/dual-input/use-cases/">For businesses</a>
-</section>
-
-<!---
-<div class ="tagline-first">
-    <p class="tagline">
-        <span class="typing-line">
-            {{ text.tagline.tag }}
-        </span><br>
-
-        <span class="mirrored">
-            <span class="typing-line">
-                {{ text.tagline.tag }}
-             </span> 
-        </span>
-    </p>
-</div>
--->
-
-<div class ="info-grid">
-    <div class ="info-box-1">
-        <p class="info-text-header"> {{ text["info-1"].title }} </p>
-        <p class="info-text"> {{ text["info-1"].paragraph1 }} </p>
-        <details class="front-info-more" open>
-            <summary>Read more</summary>
-            <p class="info-text"> {{ text["info-1"].paragraph2 }} </p>
-            <p class="info-text"> {{ text["info-1"].paragraph3 }} </p>
-        </details>
-    </div>
-
-    <div class ="info-animation-1">
-        <div class ="animation-built1used2">
-            <div class="built1used2-laptop"></div>
-            <div class="built1used2-screen"></div>
-            <div class="built1used2-cursor1"></div>
-            <div class="built1used2-cursor2"></div>
+    <section class="landing-section two-column-section">
+        <div>
+            <p class="section-kicker">The problem</p>
+            <h2>One cursor. Two people. Pick one.</h2>
         </div>
-    </div>
+        <div class="section-body">
+            <p>Most operating systems were built around a single active cursor. For a single user at a desk, that's fine. For a checkout, a hotel front desk, or a bank counter — where a staff member and a customer are supposed to work on two screens at the same time — it falls apart immediately.</p>
+            <p><strong>What actually happens today:</strong></p>
+            <ul class="check-list">
+                <li><strong>Customer input interrupts the cashier.</strong> The moment the customer taps, focus jumps to their screen and whatever the cashier was doing stalls.</li>
+                <li><strong>Input lands on the wrong screen.</strong> A tap meant for one display registers on the other, or nowhere at all.</li>
+                <li><strong>Dual-touch workflows become unmanageable.</strong> Anything that needs the customer and the staff member working in parallel — signatures, form-filling, email capture — has to be serialized, which kills the whole point of the second screen.</li>
+            </ul>
+            <p>The workarounds — lock one screen, build a separate device, route everything through the staff side — all exist because the underlying problem has never been solved at the OS level. Duo Input solves it.</p>
+        </div>
+    </section>
 
-    <div class ="info-box-2">
-        <p class="info-text-header"> {{ text["info-2"].title }} </p>
-        <p class="info-text"> {{ text["info-2"].paragraph1 }} </p>
-        <details class="front-info-more" open>
-            <summary>Read more</summary>
-            <p class="info-text"> {{ text["info-2"].paragraph2 }} </p>
-            <p class="info-text"> {{ text["info-2"].paragraph3 }} </p>
-        </details>
-    </div>
+    <section class="landing-section solution-panel">
+        <p class="section-kicker">The solution</p>
+        <h2>True simultaneous input, at the operating system level.</h2>
+        <p>Duo Input™ is software that sits between your displays and your application, and it does one thing exceptionally well: it lets two touch inputs happen at the same time, on two different screens, without either one interrupting the other. The cashier keeps processing the transaction. The customer signs, types, confirms. Neither one waits for the other.</p>
+        <p>It's not a UI trick or a polling workaround. It's patented, it's deterministic, and it runs on the operating systems you already have.</p>
+    </section>
 
-    <div class = "info-animation-2">
-        <div class ="animation-ownSession">
-            <div class="ownSession-laptop"></div>
-            <div class="ownSession-screen"></div>
-            <div class="ownSession-cursor1"></div>
-            <div class="ownSession-cursor2"></div>
-        </div> 
-    </div>
+    <section class="landing-section">
+        <p class="section-kicker">How it works</p>
+        <div class="step-grid">
+            <article>
+                <span>1</span>
+                <h3>Install.</h3>
+                <p>A single installer, around 50–150 MB. No internet connection required. No cloud dependency. No changes to your POS, your CRM, or your core application.</p>
+            </article>
+            <article>
+                <span>2</span>
+                <h3>Configure your displays.</h3>
+                <p>Point Duo Input at the two screens you want to pair — a cashier terminal and a customer-facing display, two monitors at a bank counter, a reception screen and a Wacom guest signature pad. It handles the rest.</p>
+            </article>
+            <article>
+                <span>3</span>
+                <h3>Build against a normal input model.</h3>
+                <p>Your application sees clean, parallel input streams from both screens. No custom cursor management. No focus-juggling logic. You build the flow; Duo Input makes it possible.</p>
+            </article>
+        </div>
+    </section>
 
-    <div class ="info-box-3">
-        <p class="info-text-header">{{ text["info-3"].title }}</p>
-        <p class="info-text"> {{ text["info-3"].paragraph1 }} </p>
-        <details class="front-info-more" open>
-            <summary>Read more</summary>
-            <p class="info-text"> {{ text["info-3"].paragraph2 }} </p>
-            <p class="info-text"> {{ text["info-3"].paragraph3 }} </p>
-        </details>
-    </div>
+    <section class="landing-section">
+        <p class="section-kicker">Key benefits</p>
+        <div class="feature-grid">
+            <article><h3>True simultaneous touch input</h3><p>One user keeps processing while the second user interacts with the second screen. Independent, parallel, no contention.</p></article>
+            <article><h3>Perfect for forms and data entry</h3><p>Two-screen form filling with shared progress visibility. The staff member sees what the customer is entering, in real time, on their own screen.</p></article>
+            <article><h3>Built for digital signatures</h3><p>A customer signs on their display. The staff member confirms all the fields are correct. Same moment, same meeting, no handoff.</p></article>
+            <article><h3>Email, phone, and identity capture</h3><p>The kind of CRM and KYC data that always gets lost at the counter — captured cleanly, by the person it belongs to.</p></article>
+            <article><h3>Works offline</h3><p>No internet connection required. Duo Input runs entirely on-device, which matters for compliance and latency.</p></article>
+            <article><h3>OS-native, not OS-fighting</h3><p>Windows 10, Windows 11, and selected Linux distributions. No kernel hacks, no fragile workarounds, no “it worked until the last update.”</p></article>
+        </div>
+    </section>
 
-    <div class = "info-animation-3">
-        <div class ="animation-company">
-            <a href="/dual-input/technical/" class="screen-button-link" aria-label="Go to technical details">
-                {{ text.companylink | default("ID24") }}
-            </a>
-            <p class="company-link-label">Click for technical details</p>
-        </div> 
-    </div>
+    <section class="landing-section two-column-section">
+        <div>
+            <p class="section-kicker">Who it's for</p>
+            <h2>Anywhere two people need to work on two screens at once.</h2>
+        </div>
+        <div class="section-body">
+            <p>Duo Input was built for a specific problem — the modern checkout — but the problem shows up everywhere two-user, two-screen workflows do.</p>
+            <p><strong>Retail.</strong> Cashier and customer at the till. Email capture, loyalty signup, and consent collections without breaking the cashier's rhythm.</p>
+            <p><strong>Hotels.</strong> Reception and guest at check-in. Voucher and offer selections, and marketing consent — on the guest's screen, while the receptionist finalizes the booking.</p>
+            <p><strong>Banks.</strong> Advisor and customer at the bank office. Form-filling, and digital signatures with both parties looking at — and working on — the same digital form simultaneously.</p>
+            <p>If your customer touch point has two screens today and one of them is mostly ignored, that's the use case.</p>
+        </div>
+    </section>
 
-</div>
+    <section class="landing-section signature-spotlight">
+        <div>
+            <p class="section-kicker">Use case spotlight — digital signatures</p>
+            <h2>The signature problem, solved.</h2>
+            <p>Digital signatures at a counter are awkward for a reason. Either the customer has to turn the staff member's screen around, or the staff member has to stop what they're doing and hand over control, or there's a second device bolted to the counter for this one task.</p>
+            <p>With Duo Input, the customer signs on the customer-facing display while the staff member continues working on theirs. Both inputs are live. Both are captured. The transaction closes in one motion instead of three.</p>
+        </div>
+        <svg class="spotlight-signature" viewBox="0 0 360 130" role="img" aria-label="Digital signature line">
+            <path d="M28 84 C56 32 78 118 105 70 S152 46 176 76 S232 116 257 62 S315 48 334 74" />
+        </svg>
+    </section>
+
+    <section class="landing-section two-column-section">
+        <div>
+            <p class="section-kicker">Technical specifications</p>
+            <h2>Built to slot in, not take over.</h2>
+        </div>
+        <div class="spec-table">
+            <p><span>Installer size</span><strong>~50–150 MB</strong></p>
+            <p><span>Disk space after installation</span><strong>~100–250 MB (depending on configuration)</strong></p>
+            <p><span>Runtime memory usage</span><strong>~50–150 MB</strong></p>
+            <p><span>Internet connection</span><strong>Not required</strong></p>
+            <p><span>Supported operating systems</span><strong>Windows 10 (32-bit and 64-bit), Windows 11 (64-bit), Linux (selected distributions)</strong></p>
+            <p><span>Display support</span><strong>Any two touch displays</strong></p>
+            <p><span>Integration</span><strong>Works alongside existing POS, CRM, and line-of-business applications</strong></p>
+            <p><span>Licensing</span><strong>Per-device, with volume pricing for multi-site rollouts</strong></p>
+            <p class="spec-note">A small footprint matters. Large enterprise hardware is almost never top-spec, and the last thing you need is another background service eating memory. Duo Input is built to be invisible.</p>
+        </div>
+    </section>
+
+    <section class="landing-section patent-panel">
+        <p class="section-kicker">Patent and IP</p>
+        <h2>Patented. Which means protected — for us, and for you.</h2>
+        <p>Duo Input is patent-protected technology. Simultaneous multi-display input isn't something we stumbled into; it's something we solved, filed, and defended. For customers, that means two things: the capability is durable, and the investment you make building workflows on top of it isn't going to be commoditized out from under you.</p>
+    </section>
+
+    <section class="landing-section">
+        <p class="section-kicker">FAQ</p>
+        <div class="faq-list">
+            <details open><summary>Does Duo Input require changes to my POS or line-of-business software?</summary><p>No. Duo Input sits between your displays and your application. Most customers deploy it without touching their POS at all.</p></details>
+            <details><summary>Does it work with any touch monitor?</summary><p>Yes — any standard touch display supported by Windows or Linux. No proprietary hardware required, though ID24's D|2 displays are purpose-built for this class of deployment.</p></details>
+            <details><summary>Does it need an internet connection?</summary><p>No. Duo Input runs entirely on-device. That matters for compliance, for latency, and for the times when the store network drops.</p></details>
+            <details><summary>Can we scale this across hundreds of locations?</summary><p>Yes. Duo Input is deployed today across multi-site retail networks and supported by ID24's rollout methodology. Central licensing, remote install, standard imaging — all handled.</p></details>
+            <details><summary>How is this different from just using two separate computers?</summary><p>Two computers means two sessions, two sets of state, and two places to keep in sync. Duo Input gives you one application, one transaction, and two live input streams. The workflow stays whole.</p></details>
+            <details><summary>Is there a developer SDK?</summary><p>Yes — get in touch and we'll route you to the right technical contact.</p></details>
+        </div>
+    </section>
+
+    <section class="landing-section final-cta">
+        <h2>See it running, in your environment, in thirty minutes.</h2>
+        <p>A live demo is faster than reading about it. Bring your use case — checkout, check-in, counter, bank office — and we'll show you Duo Input handling it.</p>
+        <div class="landing-actions">
+            <a class="primary-text-button" href="mailto:sales@id24.com?subject=Duo%20Input%20demo%20request">Request a demo</a>
+            <a class="secondary-text-button" href="mailto:sales@id24.com?subject=Talk%20to%20sales%20about%20Duo%20Input">Talk to sales →</a>
+        </div>
+        <p class="contact-microcopy">sales@id24.com · www.id24.com</p>
+    </section>
 </main>
 
-<!--
-<div class = "animation-section">
-    <div class="dual-stage">
-        <div class="key-input-screen"></div>
-        <div class="text-line mirrored-axis top-line">
-        <div class="frame k1">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">D</p>
-        </div>
-
-        <div class="frame k2">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">U</p>
-        </div>
-
-        <div class="frame k3">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">A</p>
-        </div>
-        
-        <div class="frame k4">
-            <img class="base" src="/img/key-base.svg" alt="">
-                <div class="recolor-overlay"></div>
-                <img class="button" src="/img/key-button.svg" alt="">
-                <div class="cover"></div>
-                <p class="text">L</p>
-        </div>
-
-        <div class="frame k5">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">I</p>
-        </div>
-
-        <div class="frame k6">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">N</p>
-        </div>
-        
-        <div class="frame k7">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">P</p>
-        </div>
-
-        <div class="frame k8">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">U</p>
-        </div>
-
-        <div class="frame k9">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">T</p>
-        </div>
+<footer class="footer-grid">
+    <div class="footer-left">
+        <p class="footer-text">Duo Input™ is a patented product. Part of ID24.</p>
+        <p class="footer-subtext">© 2026 ID24. All rights reserved.</p>
     </div>
-        <div class="key-input-screen opposite"></div>
-        <div class="text-line bottom-line">
-        <div class="frame k1">
-                <img class="base" src="/img/key-base.svg" alt="">
-                <div class="recolor-overlay"></div>
-                <img class="button" src="/img/key-button.svg" alt="">
-                <div class="cover"></div>
-                <p class="text">D</p>
-            </div>
-
-        <div class="frame k2">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">U</p>
-        </div>
-
-        <div class="frame k3">
-            <img class="base" src="/img/key-base.svg" alt="">
-            <div class="recolor-overlay"></div>
-            <img class="button" src="/img/key-button.svg" alt="">
-            <div class="cover"></div>
-            <p class="text">A</p>
-        </div>
-
-        <div class="frame k4">
-            <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">L</p>
-                            </div>
-
-                            <div class="title-gap" aria-hidden="true"></div>
-
-                            <div class="frame k5">
-                                <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">I</p>
-                            </div>
-
-                            <div class="frame k6">
-                                <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">N</p>
-                            </div>
-
-                            <div class="frame k7">
-                                <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">P</p>
-                            </div>
-
-                            <div class="frame k8">
-                                <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">U</p>
-                            </div>
-
-                            <div class="frame k9">
-                                <img class="base" src="/img/key-base.svg" alt="">
-                                <div class="recolor-overlay"></div>
-                                <img class="button" src="/img/key-button.svg" alt="">
-                                <div class="cover"></div>
-                                <p class="text">T</p>
-                            </div>
-        </div>
+    <div class="footer-right">
+        <h2 class="footer-heading">Contact us</h2>
+        <p class="footer-subtext footer-contact">Ready for demos, integrations and partnerships.</p>
+        <p class="footer-subtext footer-contact-links">
+            <a href="mailto:sales@id24.com">sales@id24.com</a>
+            <a href="https://www.id24.com/">www.id24.com</a>
+        </p>
     </div>
-</div>
--->
-
-<div class ="footer-grid">
-        <div class="footer-left">
-            <p class="footer-text">
-            {{ text.footer | default("© 2026 ID24 Technology") }}
-            </p>
-            <p class="footer-subtext">
-            Duo Input technology for shared systems, independent touch and multi-screen interaction.
-            </p>
-        </div>
-        <div class="footer-right">
-            <h2 class="footer-heading">Contact us</h2>
-            <p class="footer-subtext footer-contact">
-            Ready for demos, integrations and partnerships.
-            </p>
-            <p class="footer-subtext footer-contact-links">
-                <a href="mailto:sales@id24.com">sales@id24.com</a>
-                <a href="https://www.id24.com/">www.id24.com</a>
-            </p>
-        </div>
-</div>
+</footer>

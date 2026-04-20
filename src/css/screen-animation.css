@@ -31,10 +31,10 @@
   height: 100%;
   padding: var(--screen-padding);
   background:
-    linear-gradient(135deg, rgba(255, 176, 0, 0.08), transparent 22%),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    black;
+    linear-gradient(135deg, rgba(255, 216, 23, 0.14), transparent 24%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    #071f23;
   background-size: auto, 2rem 2rem, 2rem 2rem, auto;
   border-radius: var(--screen-radius);
   overflow: hidden;
@@ -42,9 +42,9 @@
   isolation: isolate;
   border: 0;
   box-shadow:
-    0 0 0 2px rgba(255, 255, 255, 0.28),
-    0 1.4vh 3.6vh rgba(255, 255, 255, 0.22),
-    0 0 3.8vh rgba(255, 176, 0, 0.12);
+    0 0 0 2px rgba(11, 48, 53, 0.38),
+    0 1.4vh 3.6vh rgba(11, 48, 53, 0.18),
+    0 0 3.8vh rgba(255, 216, 23, 0.16);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  color: rgba(255, 176, 0, 0.72);
+  color: #ffd817;
   font-family: "Oswald", "Open Sans", Arial, sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
@@ -105,7 +105,7 @@
 .input-screen {
   width: calc((5 * var(--key-size)) + (3 * var(--key-gap)));
   min-height: 7vh;
-  border-bottom: rgba(255, 255, 255, 0.45) 0.18vh solid;
+  border-bottom: rgba(255, 255, 255, 0.62) 0.18vh solid;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -124,14 +124,14 @@
 }
 
 .screen-button {
-  background: black;
-  color: rgba(255, 255, 255, 0.72);
+  background: #f8f8f6;
+  color: #0b3035;
 
   border-radius: 0.9vh;
   border: 0;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.18),
-    0 0.45vh 1vh rgba(255, 255, 255, 0.12),
+    0 0 0 1px rgba(11, 48, 53, 0.18),
+    0 0.45vh 1vh rgba(11, 48, 53, 0.14),
     0 0 0.9vh rgba(255, 255, 255, 0.1);
 
   font-family: "Open Sans", Arial, sans-serif;
@@ -159,22 +159,22 @@
 }
 
 .screen-button::after {
-  background: black !important;
+  background: #f8f8f6 !important;
 }
 
 .screen-button:active {
   transform: scale(0.85);
-  background: black;
+  background: #f8f8f6;
 }
 
 .screen-button.pressed {
   transform: scale(0.98);
-  background: #241800;
-  color: #ffb000;
+  background: #ffd817;
+  color: #0b3035;
   box-shadow:
-    0 0 0 1px rgba(255, 176, 0, 0.44),
-    0 0.35vh 0.9vh rgba(255, 176, 0, 0.2),
-    0 0 1.2vh rgba(255, 176, 0, 0.18);
+    0 0 0 1px rgba(11, 48, 53, 0.3),
+    0 0.35vh 0.9vh rgba(255, 216, 23, 0.28),
+    0 0 1.2vh rgba(255, 216, 23, 0.22);
 }
 
 .screen-button.key-blancspace{
