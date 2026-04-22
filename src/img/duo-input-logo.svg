@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="32" viewBox="0 0 148 32" role="img" aria-label="Duo Input">
+  <rect x="0" y="10" width="12" height="12" rx="3" fill="#ffd817"/>
+  <text x="22" y="23" fill="#0b3035" font-family="Oswald, Open Sans, Arial, sans-serif" font-size="22" font-weight="500" letter-spacing="0">
+    <tspan>DUO INPUT</tspan>
+  </text>
+</svg>
