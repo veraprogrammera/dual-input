@@ -6,32 +6,29 @@ permalink: /duoinput/
 <div id="top"></div>
 <div class ="topbar">
     <div class="topbarleft">
-        <a href="/duoinput/" class="topbarbutton topbartext">
-            Duo Input
+        <a href="#top" class="topbarbutton brand-mark" aria-label="Go to top">
+            <img src="/img/duo-input-logo.svg" alt="Duo Input" class="brand-mark-logo">
         </a>
         <nav class="topbar-scroll-nav" aria-label="Duo Input page navigation">
-            <a href="/duoinput/businesses/" class="topbarbutton topbartext">For businesses</a>
-            <a href="/duoinput/technical/" class="topbarbutton topbartext">Technical details</a>
+            <a href="#key-benefits" class="topbarbutton topbartext">Key benefits</a>
+            <a href="#technical-specs" class="topbarbutton topbartext">Technical specifications</a>
+            <a href="#demo-request" class="topbarbutton topbartext">Request a demo</a>
         </nav>
-    </div>
-
-    <div class="topbarcenter"></div> 
-
-    <div class="topbarright" id="topbarRight">
-        <a href="https://id24.com/" class="topbarbutton topbartext company-link" data-cursor-label="Go to company website">
-            ID24 Technology
-        </a>
     </div>
 </div>
 
 <main class="duo-landing">
     <section class="landing-hero">
         <div class="landing-hero-copy">
-            <p class="landing-eyebrow">Duo Input™ by ID24 · Patented</p>
+            <div class="landing-eyebrow-pill" aria-label="Duo Input patented product by ID24">
+                <span>Duo Input by ID24</span>
+                <span>Patented</span>
+            </div>
             <h1>Two screens. Two users. <span class="nowrap-line">One seamless</span> experience.</h1>
-            <p class="landing-lead">Duo Input™ is patented software that enables true simultaneous touch input across multiple displays. No cursor conflicts, no interruptions, no operating-system workarounds. Two people can work on two screens at the same time, and it just works.</p>
+            <p class="landing-lead">Duo Input is patented software that enables true simultaneous touch input across multiple displays. No cursor conflicts, no interruptions, no operating-system workarounds. Two people can work on two screens at the same time, and it just works.</p>
             <div class="landing-actions">
-                <a class="primary-text-button" href="#demo-request" data-email-action data-mail-name="sales" data-mail-host="id24" data-mail-tld="com" data-cursor-label="Send mail" aria-label="Request a demo by email">Request a demo</a>
+                <a class="primary-text-button" href="#demo-request">Request a demo</a>
+                <a class="secondary-text-button" href="#technical-specs">See technical specs</a>
             </div>
         </div>
     </section>
@@ -97,10 +94,19 @@ permalink: /duoinput/
     </section>
 
     <section class="landing-section solution-panel">
-        <p class="section-kicker">The solution</p>
-        <h2>True simultaneous input, at the operating system level.</h2>
-        <p>Duo Input™ is software that sits between your displays and your application, and it does one thing exceptionally well: it lets two touch inputs happen at the same time, on two different screens, without either one interrupting the other. The cashier keeps processing the transaction. The customer signs, types, confirms. Neither one waits for the other.</p>
-        <p>It's not a UI trick or a polling workaround. It's patented, it's deterministic, and it runs on the operating systems you already have.</p>
+        <div class="solution-panel-header">
+            <div class="solution-panel-title">
+                <p class="section-kicker">The solution</p>
+                <h2>True simultaneous input, at the operating system level.</h2>
+            </div>
+            <figure class="solution-panel-visual">
+                <img src="/img/dual-input-monitors.png" alt="Two users interacting with two touch displays at the same time.">
+            </figure>
+        </div>
+        <div class="solution-panel-body">
+            <p>Duo Input™ is software that sits between your displays and your application, and it does one thing exceptionally well: it lets two touch inputs happen at the same time, on two different screens, without either one interrupting the other. The cashier keeps processing the transaction. The customer signs, types, confirms. Neither one waits for the other.</p>
+            <p>It's not a UI trick or a polling workaround. It's patented, it's deterministic, and it runs on the operating systems you already have.</p>
+        </div>
     </section>
 
     <section class="landing-section">
@@ -124,15 +130,51 @@ permalink: /duoinput/
         </div>
     </section>
 
-    <section class="landing-section">
+    <section class="landing-section" id="key-benefits">
         <p class="section-kicker">Key benefits</p>
         <div class="feature-grid">
-            <article><h3>True simultaneous touch input</h3><p>One user keeps processing while the second user interacts with the second screen. Independent, parallel, no contention.</p></article>
-            <article><h3>Perfect for forms and data entry</h3><p>Two-screen form filling with shared progress visibility. The staff member sees what the customer is entering, in real time, on their own screen.</p></article>
-            <article><h3>Built for digital signatures</h3><p>A customer signs on their display. The staff member confirms all the fields are correct. Same moment, same meeting, no handoff.</p></article>
-            <article><h3>Email, phone, and identity capture</h3><p>The kind of CRM and KYC data that always gets lost at the counter, captured cleanly by the person it belongs to.</p></article>
-            <article><h3>Works offline</h3><p>No internet connection required. Duo Input runs entirely on-device, which matters for compliance and latency.</p></article>
-            <article><h3>OS-native, not OS-fighting</h3><p>Windows 10, Windows 11, and selected Linux distributions. No kernel hacks, no fragile workarounds, no “it worked until the last update.”</p></article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-streams" aria-hidden="true"></span>
+                    <h3>True simultaneous touch input</h3>
+                </div>
+                <p>One user keeps processing while the second user interacts with the second screen. Independent, parallel, no contention.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-form" aria-hidden="true"></span>
+                    <h3>Perfect for forms and data entry</h3>
+                </div>
+                <p>Two-screen form filling with shared progress visibility. The staff member sees what the customer is entering, in real time, on their own screen.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-signature" aria-hidden="true"></span>
+                    <h3>Built for digital signatures</h3>
+                </div>
+                <p>A customer signs on their display. The staff member confirms all the fields are correct. Same moment, same meeting, no handoff.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-id" aria-hidden="true"></span>
+                    <h3>Email, phone, and identity capture</h3>
+                </div>
+                <p>The kind of CRM and KYC data that always gets lost at the counter, captured cleanly by the person it belongs to.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-offline" aria-hidden="true"></span>
+                    <h3>Works offline</h3>
+                </div>
+                <p>No internet connection required. Duo Input runs entirely on-device, which matters for compliance and latency.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-header">
+                    <span class="feature-icon feature-icon-os" aria-hidden="true"></span>
+                    <h3>OS-native, not OS-fighting</h3>
+                </div>
+                <p>Windows 10, Windows 11, and selected Linux distributions. No kernel hacks, no fragile workarounds, no “it worked until the last update.”</p>
+            </article>
         </div>
     </section>
 
@@ -162,7 +204,7 @@ permalink: /duoinput/
         </svg>
     </section>
 
-    <section class="landing-section two-column-section">
+    <section class="landing-section two-column-section" id="technical-specs">
         <div>
             <p class="section-kicker">Technical specifications</p>
             <h2>Built to slot in, not take over.</h2>
@@ -187,12 +229,15 @@ permalink: /duoinput/
         </div>
         <div class="section-body">
             <p>Duo Input is patent-protected technology. Simultaneous multi-display input isn't something we stumbled into; it's something we solved, filed, and defended. For customers, that means two things: the capability is durable, and the investment you make building workflows on top of it isn't going to be commoditized out from under you.</p>
+            <figure class="patent-visual">
+                <img src="/img/patent-scales.svg" alt="Yellow scales of justice symbol representing protected patent rights.">
+            </figure>
         </div>
     </section>
 
     <section class="landing-section two-column-section">
         <div>
-            <p class="section-kicker">FAQ</p>
+            <h2>FAQ</h2>
         </div>
         <div class="faq-list">
             <details open><summary>Does Duo Input require changes to my POS or line-of-business software?</summary><p>No. Duo Input sits between your displays and your application. Most customers deploy it without touching their POS at all.</p></details>
@@ -204,31 +249,27 @@ permalink: /duoinput/
         </div>
     </section>
 
-    <section class="landing-section final-cta">
+    <section class="landing-section final-cta" id="demo-request">
         <h2>See it running, in your environment, in thirty minutes.</h2>
-        <p>A live demo is faster than reading about it. Bring your use case, from checkout and check-in to counter service or a bank office, and we'll show you Duo Input handling it.</p>
-        <div class="landing-actions">
-            <a class="primary-text-button" href="#demo-request" data-email-action data-mail-name="sales" data-mail-host="id24" data-mail-tld="com" data-cursor-label="Send mail" aria-label="Request a demo by email">Request a demo</a>
+        <div class="final-cta-copy">
+            <p>A live demo is faster than reading about it. Bring your use case, from checkout and check-in to counter service or a bank office, and we'll show you Duo Input handling it.</p>
+            <div class="landing-actions">
+                <a class="demo-email-button" href="#demo-request" data-email-action data-mail-name="sales" data-mail-host="id24" data-mail-tld="com" data-cursor-label="Send mail" aria-label="Send an email to request a demo">
+                    <img class="email-image email-image-demo" src="/img/contact-email.svg" alt="sales@id24.com">
+                </a>
+            </div>
         </div>
-        <p class="contact-microcopy">
-            <img class="email-image email-image-inline" src="/img/contact-email.svg" alt="Sales email address">
-            <span aria-hidden="true"> · </span>
-            <a href="https://www.id24.com/">www.id24.com</a>
-        </p>
     </section>
 </main>
 
 <footer class="footer-grid">
-    <div class="footer-left">
-        <p class="footer-text">Duo Input™ is a patented product. Part of ID24.</p>
-        <p class="footer-subtext">© 2026 ID24. All rights reserved.</p>
-    </div>
-    <div class="footer-right">
-        <h2 class="footer-heading">Contact us</h2>
-        <p class="footer-subtext footer-contact">Ready for demos, integrations and partnerships.</p>
-        <p class="footer-subtext footer-contact-links">
+    <p class="footer-line">
+        <span class="footer-text">Duo Input. Patented by ID24.</span>
+        <span class="footer-subtext">© 2026 ID24.</span>
+        <span class="footer-subtext">Demos, integrations, partnerships.</span>
+        <span class="footer-contact-links">
             <img class="email-image" src="/img/contact-email.svg" alt="Sales email address">
             <a href="https://www.id24.com/">www.id24.com</a>
-        </p>
-    </div>
+        </span>
+    </p>
 </footer>
